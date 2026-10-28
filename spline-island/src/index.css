@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* shadcn (neutral) design tokens, scoped to the island so they can't collide with the host page's variables */
+#spline-island-root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --border: 0 0% 89.8%;
+  --radius: 0.5rem;
+  margin: 0 0 40px;
+  text-align: left;
+}
+
+/* Minimal stand-in for Tailwind's preflight (disabled globally in tailwind.config.ts).
+   Specificity is lower than the scoped utilities, so classes like `border` / `h-full` still win. */
+#spline-island-root *,
+#spline-island-root *::before,
+#spline-island-root *::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: hsl(var(--border));
+}
+#spline-island-root h1,
+#spline-island-root p {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+#spline-island-root canvas {
+  display: block;
+}
+
+/* Spinner referenced by <SplineScene />'s Suspense fallback (className="loader") */
+#spline-island-root .loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  animation: spline-island-spin 0.9s linear infinite;
+}
+@keyframes spline-island-spin {
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #spline-island-root .loader { animation-duration: 3s; }
+}

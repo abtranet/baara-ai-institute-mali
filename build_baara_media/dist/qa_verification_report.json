@@ -1,0 +1,72 @@
+{
+  "project": "baara.ai (Bamako Edge Release)",
+  "overallGateStatus": "PASS",
+  "checks": {
+    "avSync": {
+      "metric": "AV Lip-Sync Container Drift",
+      "measuredMs": 0.0,
+      "thresholdMs": 45.0,
+      "status": "PASS"
+    },
+    "colorScienceDeltaE": {
+      "metric": "Sahel Color Science Consistency (CIEDE2000)",
+      "overallMeanDeltaE": 1.05,
+      "maxSceneDeltaE": 1.05,
+      "targetMeanDeltaE": 3.5,
+      "scenes": [
+        {
+          "sceneId": "BR_01_ACI2000_DAWN",
+          "deltaE_Indigo": 0.56,
+          "deltaE_Terracotta": 1.85,
+          "deltaE_MaliGold": 0.73,
+          "sceneMeanDeltaE": 1.05
+        },
+        {
+          "sceneId": "BR_02_ENGINEER_EDGE_TERMINAL",
+          "deltaE_Indigo": 0.5,
+          "deltaE_Terracotta": 1.89,
+          "deltaE_MaliGold": 0.73,
+          "sceneMeanDeltaE": 1.04
+        },
+        {
+          "sceneId": "BR_03_SOTUBA_LOGISTICS_FIELD",
+          "deltaE_Indigo": 0.46,
+          "deltaE_Terracotta": 1.96,
+          "deltaE_MaliGold": 0.73,
+          "sceneMeanDeltaE": 1.05
+        },
+        {
+          "sceneId": "BR_04_VOICE_WAVEFORM_BOGOLAN",
+          "deltaE_Indigo": 0.46,
+          "deltaE_Terracotta": 1.96,
+          "deltaE_MaliGold": 0.73,
+          "sceneMeanDeltaE": 1.05
+        },
+        {
+          "sceneId": "BR_05_MERCHANT_FINTECH_MOBILE",
+          "deltaE_Indigo": 0.46,
+          "deltaE_Terracotta": 1.94,
+          "deltaE_MaliGold": 0.73,
+          "sceneMeanDeltaE": 1.04
+        },
+        {
+          "sceneId": "BR_06_BAARA_HORIZON_OUTRO",
+          "deltaE_Indigo": 0.52,
+          "deltaE_Terracotta": 1.89,
+          "deltaE_MaliGold": 0.73,
+          "sceneMeanDeltaE": 1.05
+        }
+      ],
+      "status": "PASS"
+    },
+    "edgeNetworkTtff": {
+      "metric": "Bamako 1.5 Mbps Edge TTFF & Payload Budget",
+      "estimatedTtffMs": 526.2,
+      "targetMaxTtffMs": 1400.0,
+      "startupSegmentPayloadKB": 18.53,
+      "posterFrameKB": 2.73,
+      "animatedWebpFallbackKB": 3.18,
+      "status": "PASS"
+    }
+  }
+}

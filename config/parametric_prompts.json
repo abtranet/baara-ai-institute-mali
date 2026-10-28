@@ -1,0 +1,159 @@
+{
+  "heygenPresenterSpec": {
+    "avatarId": "baara_presenter_aminata_v3",
+    "voiceProfile": "fr-ML-Diarra-Neural-Pro",
+    "resolution": "1920x1080",
+    "fps": 24,
+    "audioExport": "48000Hz_24bit_PCM_WAV",
+    "studioBackdropHex": "#0B132B",
+    "rimLightHex": "#E5A93C",
+    "segments": [
+      {
+        "segmentId": "HG_SEG_01",
+        "timecodeIn": 0.0,
+        "timecodeOut": 9.5,
+        "emotionalInflection": { "valence": 0.45, "arousal": 0.30, "warmth": 0.80 },
+        "prosody": { "rate": 0.96, "pitchSemitones": -1.5 },
+        "gestures": [
+          { "trigger": "G_NOD_SUBTLE", "offsetSec": 0.4 },
+          { "trigger": "G_OPEN_PALM_RIGHT", "offsetSec": 5.2 }
+        ],
+        "ssmlScript": "À Bamako, <break time=\"280ms\"/> le talent n'a jamais manqué. <phoneme alphabet=\"ipa\" ph=\"bɑː.ʁɑ\">Baara</phoneme> <break time=\"220ms\"/> transforme cette énergie en intelligence artificielle souveraine, bâtie pour nos réalités. <break time=\"450ms\"/>"
+      },
+      {
+        "segmentId": "HG_SEG_02",
+        "timecodeIn": 9.5,
+        "timecodeOut": 20.0,
+        "emotionalInflection": { "valence": 0.25, "arousal": 0.50, "warmth": 0.60 },
+        "prosody": { "rate": 1.02, "pitchSemitones": 0.0 },
+        "gestures": [
+          { "trigger": "G_LEAN_FORWARD_2DEG", "offsetSec": 0.2 },
+          { "trigger": "G_HAND_CHEST_EMPHASIS", "offsetSec": 6.8 }
+        ],
+        "ssmlScript": "De Sotuba à ACI Deux-Mille, <break time=\"240ms\"/> nos entreprises traitent des milliers de flux chaque jour. <break time=\"320ms\"/> Sans dépendre de serveurs lointains, nos modèles comprennent nos langues, nos marchés, et notre rythme. <break time=\"400ms\"/>"
+      },
+      {
+        "segmentId": "HG_SEG_03",
+        "timecodeIn": 20.0,
+        "timecodeOut": 32.0,
+        "emotionalInflection": { "valence": 0.65, "arousal": 0.65, "warmth": 0.75 },
+        "prosody": { "rate": 1.00, "pitchSemitones": 0.5 },
+        "gestures": [
+          { "trigger": "G_BROW_RAISE_EMPHATIC", "offsetSec": 0.5 },
+          { "trigger": "G_TWO_HAND_CONVERGE", "offsetSec": 7.9 }
+        ],
+        "ssmlScript": "Logistique, finance, agro-industrie, éducation : <break time=\"350ms\"/> chaque décision devient instantanée, <break time=\"180ms\"/> même sur un réseau mobile contraint. L'intelligence artificielle n'est plus un luxe importé. <break time=\"500ms\"/>"
+      },
+      {
+        "segmentId": "HG_SEG_04",
+        "timecodeIn": 32.0,
+        "timecodeOut": 44.5,
+        "emotionalInflection": { "valence": 0.55, "arousal": 0.45, "warmth": 0.85 },
+        "prosody": { "rate": 0.95, "pitchSemitones": -0.5 },
+        "gestures": [
+          { "trigger": "G_HEAD_TILT_LEFT_3DEG", "offsetSec": 0.6 },
+          { "trigger": "G_NOD_AFFIRMATIVE", "offsetSec": 9.4 }
+        ],
+        "ssmlScript": "C'est un outil de travail quotidien. <break time=\"300ms\"/> Conçu par nos ingénieurs, <break time=\"200ms\"/> optimisé pour chaque téléphone, chaque atelier, chaque équipe sur le terrain. <break time=\"450ms\"/>"
+      },
+      {
+        "segmentId": "HG_SEG_05",
+        "timecodeIn": 44.5,
+        "timecodeOut": 60.0,
+        "emotionalInflection": { "valence": 0.85, "arousal": 0.70, "warmth": 0.90 },
+        "prosody": { "rate": 0.92, "pitchSemitones": 0.0 },
+        "gestures": [
+          { "trigger": "G_DIRECT_EYE_LOCK", "offsetSec": 0.0 },
+          { "trigger": "G_WARM_SMILE_HOLD", "offsetSec": 11.2 }
+        ],
+        "ssmlScript": "Le futur du travail en Afrique de l'Ouest s'écrit ici, <break time=\"320ms\"/> maintenant. <break time=\"400ms\"/> Rejoignez <phoneme alphabet=\"ipa\" ph=\"bɑː.ʁɑ\">baara</phoneme> point A-I. <break time=\"800ms\"/>"
+      }
+    ]
+  },
+  "runwayGen3Prompts": [
+    {
+      "sceneId": "BR_01_ACI2000_DAWN",
+      "seed": 4092811,
+      "durationSeconds": 10.0,
+      "timelineWindow": [4.0, 9.5],
+      "vectors": {
+        "subjectAndAction": "Aerial architectural shot over Bamako ACI 2000 district at dawn transitioning toward the Niger River bridge, sleek modern Sudanese-Sahelian terracotta-clad tech office building with warm interior glass glowing as Malian software engineers gather around an interactive glass table",
+        "cameraPath": "Smooth orbital dolly-in combined with a -4 degree downward tilt, Speed Vector: 1.4 m/s decelerating smoothly to 0.3 m/s over 10 seconds, 35mm anamorphic lens",
+        "lighting": "2700K Sahel Golden Hour sunrise grazing the mud-brick and glass facades, soft atmospheric harmattan dust diffusion 0.35, long volumetric light shafts with inverse-square falloff across the courtyard",
+        "colorScience": "Primary architectural tones in Terracotta #C85A32, specular rim highlights and window reflections in Mali Gold #E5A93C, deep dawn sky and glass shadow valleys anchored in Deep Indigo #0B132B",
+        "negativeConstraints": "no artifacting, no temporal jitter, no morphing architecture, no Westernized classroom tropes, no neon cyberpunk clichés, no distorted hands or text"
+      },
+      "compiledPrompt": "[Subject & Action: Aerial architectural shot over Bamako ACI 2000 district at dawn transitioning toward the Niger River bridge, sleek modern Sudanese-Sahelian terracotta-clad tech office building with warm interior glass glowing as Malian software engineers gather around an interactive glass table] + [Camera Path: Smooth orbital dolly-in combined with a -4 degree downward tilt, Speed Vector: 1.4 m/s decelerating smoothly to 0.3 m/s over 10 seconds, 35mm anamorphic lens] + [Lighting: 2700K Sahel Golden Hour sunrise grazing the mud-brick and glass facades, soft atmospheric harmattan dust diffusion 0.35, long volumetric light shafts with inverse-square falloff across the courtyard] + [Color Science: Primary architectural tones in Terracotta #C85A32, specular rim highlights and window reflections in Mali Gold #E5A93C, deep dawn sky and glass shadow valleys anchored in Deep Indigo #0B132B] + [Negative Constraints: no artifacting, no temporal jitter, no morphing architecture, no Westernized classroom tropes, no neon cyberpunk clichés, no distorted hands or text]"
+    },
+    {
+      "sceneId": "BR_02_ENGINEER_EDGE_TERMINAL",
+      "seed": 4092812,
+      "durationSeconds": 10.0,
+      "timelineWindow": [11.5, 19.0],
+      "vectors": {
+        "subjectAndAction": "Medium close-up of a focused Malian female AI systems architect in a contemporary Bamako studio wearing a tailored indigo Bogolan-textured blazer, reviewing real-time neural telemetry waveforms on an ultra-thin matte monitor while holding a rugged smartphone testing edge inference",
+        "cameraPath": "Lateral truck right to left with subtle 85mm shallow depth-of-field parallax rack focus from smartphone screen to her eyes, Speed Vector: 0.18 m/s constant velocity, 0 degree roll",
+        "lighting": "2900K warm key light through slatted wooden louvres creating structured chiaroscuro, 0.45 silk diffusion, soft volumetric screen bounce with natural skin-tone specular roll-off",
+        "colorScience": "Warm skin undertones and Bogolan accents in Terracotta #C85A32, UI telemetry waveforms and key light edges in Mali Gold #E5A93C, ambient studio background and blazer shadows in Deep Indigo #0B132B",
+        "negativeConstraints": "no artifacting, no temporal jitter, no gibberish HUD holograms, no Westernized classroom tropes, no extra fingers, no frame flicker"
+      },
+      "compiledPrompt": "[Subject & Action: Medium close-up of a focused Malian female AI systems architect in a contemporary Bamako studio wearing a tailored indigo Bogolan-textured blazer, reviewing real-time neural telemetry waveforms on an ultra-thin matte monitor while holding a rugged smartphone testing edge inference] + [Camera Path: Lateral truck right to left with subtle 85mm shallow depth-of-field parallax rack focus from smartphone screen to her eyes, Speed Vector: 0.18 m/s constant velocity, 0 degree roll] + [Lighting: 2900K warm key light through slatted wooden louvres creating structured chiaroscuro, 0.45 silk diffusion, soft volumetric screen bounce with natural skin-tone specular roll-off] + [Color Science: Warm skin undertones and Bogolan accents in Terracotta #C85A32, UI telemetry waveforms and key light edges in Mali Gold #E5A93C, ambient studio background and blazer shadows in Deep Indigo #0B132B] + [Negative Constraints: no artifacting, no temporal jitter, no gibberish HUD holograms, no Westernized classroom tropes, no extra fingers, no frame flicker]"
+    },
+    {
+      "sceneId": "BR_03_SOTUBA_LOGISTICS_FIELD",
+      "seed": 4092813,
+      "durationSeconds": 10.0,
+      "timelineWindow": [21.5, 29.5],
+      "vectors": {
+        "subjectAndAction": "Dynamic tracking shot inside a bustling modern solar-powered agri-logistics warehouse in Sotuba Bamako, a logistics coordinator scanning stacked burlap and recyclable crates with a mobile AI vision tablet that highlights inventory flow in real time",
+        "cameraPath": "Forward Steadicam dolly tracking behind and beside the coordinator at shoulder height with a gentle +12 degree pan left, Speed Vector: 0.85 m/s steady stride",
+        "lighting": "2800K Sahel Golden Hour sunlight streaming through high industrial clerestory windows, 0.50 suspended dust-mote volumetric falloff, high-contrast natural bounce off terracotta-colored floor tiles",
+        "colorScience": "Warehouse masonry and crate accents in Terracotta #C85A32, sunlight beams and tablet light reflection in Mali Gold #E5A93C, deep structural steel beams and shadow recesses in Deep Indigo #0B132B",
+        "negativeConstraints": "no artifacting, no temporal jitter, no floating objects, no Westernized classroom tropes, no warped faces, no unnatural motion blur"
+      },
+      "compiledPrompt": "[Subject & Action: Dynamic tracking shot inside a bustling modern solar-powered agri-logistics warehouse in Sotuba Bamako, a logistics coordinator scanning stacked burlap and recyclable crates with a mobile AI vision tablet that highlights inventory flow in real time] + [Camera Path: Forward Steadicam dolly tracking behind and beside the coordinator at shoulder height with a gentle +12 degree pan left, Speed Vector: 0.85 m/s steady stride] + [Lighting: 2800K Sahel Golden Hour sunlight streaming through high industrial clerestory windows, 0.50 suspended dust-mote volumetric falloff, high-contrast natural bounce off terracotta-colored floor tiles] + [Color Science: Warehouse masonry and crate accents in Terracotta #C85A32, sunlight beams and tablet light reflection in Mali Gold #E5A93C, deep structural steel beams and shadow recesses in Deep Indigo #0B132B] + [Negative Constraints: no artifacting, no temporal jitter, no floating objects, no Westernized classroom tropes, no warped faces, no unnatural motion blur]"
+    },
+    {
+      "sceneId": "BR_04_VOICE_WAVEFORM_BOGOLAN",
+      "seed": 4092814,
+      "durationSeconds": 10.0,
+      "timelineWindow": [30.5, 36.5],
+      "vectors": {
+        "subjectAndAction": "Macro abstract physical-digital visualization of acoustic voice waves transforming into geometric Malian Bogolanfini patterns made of luminous woven brass fibers and carved terracotta clay nodes pulsing in rhythm with human speech",
+        "cameraPath": "Slow macro push-in dolly along the z-axis with a subtle +3 degree clockwise Dutch roll, Speed Vector: 0.08 m/s micro-cinema macro movement, 100mm macro prime lens at f/2.8",
+        "lighting": "2700K directional rim lighting grazing the woven textures, 0.25 micro-diffusion, steep volumetric shadow falloff into dark velvet negative space",
+        "colorScience": "Carved clay nodes and warm threads in Terracotta #C85A32, glowing acoustic filaments in Mali Gold #E5A93C, surrounding infinite void and deep weave recesses in Deep Indigo #0B132B",
+        "negativeConstraints": "no artifacting, no temporal jitter, no generic blue matrix code rain, no Westernized classroom tropes, no aliasing shimmer"
+      },
+      "compiledPrompt": "[Subject & Action: Macro abstract physical-digital visualization of acoustic voice waves transforming into geometric Malian Bogolanfini patterns made of luminous woven brass fibers and carved terracotta clay nodes pulsing in rhythm with human speech] + [Camera Path: Slow macro push-in dolly along the z-axis with a subtle +3 degree clockwise Dutch roll, Speed Vector: 0.08 m/s micro-cinema macro movement, 100mm macro prime lens at f/2.8] + [Lighting: 2700K directional rim lighting grazing the woven textures, 0.25 micro-diffusion, steep volumetric shadow falloff into dark velvet negative space] + [Color Science: Carved clay nodes and warm threads in Terracotta #C85A32, glowing acoustic filaments in Mali Gold #E5A93C, surrounding infinite void and deep weave recesses in Deep Indigo #0B132B] + [Negative Constraints: no artifacting, no temporal jitter, no generic blue matrix code rain, no Westernized classroom tropes, no aliasing shimmer]"
+    },
+    {
+      "sceneId": "BR_05_MERCHANT_FINTECH_MOBILE",
+      "seed": 4092815,
+      "durationSeconds": 10.0,
+      "timelineWindow": [38.0, 45.0],
+      "vectors": {
+        "subjectAndAction": "Over-the-shoulder cinematic shot in an upscale covered artisan and commerce courtyard in Bamako, a young entrepreneur using a smartphone voice assistant interface with clean golden audio bars to automate supply orders while smiling warmly at a partner",
+        "cameraPath": "Arc dolly 25 degrees counter-clockwise around the subjects combined with a slight upward tilt +3 degrees, Speed Vector: 0.25 m/s fluid motion, 50mm prime lens",
+        "lighting": "2700K late afternoon Sahel Golden Hour backlight filtering through woven reed canopies, 0.40 warm diffusion, soft volumetric rim glow around shoulders and hair",
+        "colorScience": "Earth-toned courtyard walls and textiles in Terracotta #C85A32, canopy sunbeams and smartphone audio UI in Mali Gold #E5A93C, shaded archway depth and attire in Deep Indigo #0B132B",
+        "negativeConstraints": "no artifacting, no temporal jitter, no unreadable deformed text on phone, no Westernized classroom tropes, no plastic skin texture"
+      },
+      "compiledPrompt": "[Subject & Action: Over-the-shoulder cinematic shot in an upscale covered artisan and commerce courtyard in Bamako, a young entrepreneur using a smartphone voice assistant interface with clean golden audio bars to automate supply orders while smiling warmly at a partner] + [Camera Path: Arc dolly 25 degrees counter-clockwise around the subjects combined with a slight upward tilt +3 degrees, Speed Vector: 0.25 m/s fluid motion, 50mm prime lens] + [Lighting: 2700K late afternoon Sahel Golden Hour backlight filtering through woven reed canopies, 0.40 warm diffusion, soft volumetric rim glow around shoulders and hair] + [Color Science: Earth-toned courtyard walls and textiles in Terracotta #C85A32, canopy sunbeams and smartphone audio UI in Mali Gold #E5A93C, shaded archway depth and attire in Deep Indigo #0B132B] + [Negative Constraints: no artifacting, no temporal jitter, no unreadable deformed text on phone, no Westernized classroom tropes, no plastic skin texture]"
+    },
+    {
+      "sceneId": "BR_06_BAARA_HORIZON_OUTRO",
+      "seed": 4092816,
+      "durationSeconds": 10.0,
+      "timelineWindow": [49.0, 56.0],
+      "vectors": {
+        "subjectAndAction": "Wide heroic silhouette and three-quarter profile of a collaborative team of Malian technologists standing on a rooftop terrace overlooking Bamako at twilight as warm city lights awaken across the Niger River valley",
+        "cameraPath": "Slow pedestal up combined with a backward dolly pull-out revealing the expansive Bamako skyline, Speed Vector: 0.40 m/s smooth crane motion, 28mm wide cinema lens",
+        "lighting": "2700K lingering Sahel sunset horizon meeting twilight sky, 0.30 atmospheric dusk diffusion, soft volumetric horizon glow fading upward",
+        "colorScience": "Horizon band and rooftop terracotta parapet in Terracotta #C85A32, city lights and rim-lit profiles in Mali Gold #E5A93C, expansive twilight sky and foreground silhouettes in Deep Indigo #0B132B",
+        "negativeConstraints": "no artifacting, no temporal jitter, no anatomical distortion, no Westernized classroom tropes, no oversaturated neon"
+      },
+      "compiledPrompt": "[Subject & Action: Wide heroic silhouette and three-quarter profile of a collaborative team of Malian technologists standing on a rooftop terrace overlooking Bamako at twilight as warm city lights awaken across the Niger River valley] + [Camera Path: Slow pedestal up combined with a backward dolly pull-out revealing the expansive Bamako skyline, Speed Vector: 0.40 m/s smooth crane motion, 28mm wide cinema lens] + [Lighting: 2700K lingering Sahel sunset horizon meeting twilight sky, 0.30 atmospheric dusk diffusion, soft volumetric horizon glow fading upward] + [Color Science: Horizon band and rooftop terracotta parapet in Terracotta #C85A32, city lights and rim-lit profiles in Mali Gold #E5A93C, expansive twilight sky and foreground silhouettes in Deep Indigo #0B132B] + [Negative Constraints: no artifacting, no temporal jitter, no anatomical distortion, no Westernized classroom tropes, no oversaturated neon]"
+    }
+  ]
+}

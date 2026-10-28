@@ -1,0 +1,76 @@
+{
+  "project": "baara.ai_launch_spot_v1",
+  "fps": 24,
+  "duration_sec": 60.0,
+  "presenter_video": "assets/raw/heygen_presenter_1080p24.mp4",
+  "presenter_audio": "assets/raw/heygen_presenter_48k24b.wav",
+  "music_bed": "assets/raw/kora_synth_bed_48k.wav",
+  "broll_schedule": [
+    {
+      "scene_id": "BR_01_ACI2000_DAWN",
+      "clip_path": "assets/raw/runway_br01_aci2000.mp4",
+      "timeline_video_in": 4.00,
+      "timeline_video_out": 9.50,
+      "clip_seek_in": 0.50,
+      "fade_in_sec": 0.25,
+      "fade_out_sec": 0.35,
+      "cut_type": "L-CUT",
+      "narrative_note": "Presenter finishes sentence #1 over aerial ACI 2000 dawn shot before cutting back"
+    },
+    {
+      "scene_id": "BR_02_ENGINEER_EDGE_TERMINAL",
+      "clip_path": "assets/raw/runway_br02_engineer.mp4",
+      "timeline_video_in": 11.50,
+      "timeline_video_out": 19.00,
+      "clip_seek_in": 1.00,
+      "fade_in_sec": 0.20,
+      "fade_out_sec": 0.25,
+      "cut_type": "J-CUT",
+      "narrative_note": "Next vocal phrase starts before returning to presenter at 19.0s"
+    },
+    {
+      "scene_id": "BR_03_SOTUBA_LOGISTICS_FIELD",
+      "clip_path": "assets/raw/runway_br03_sotuba.mp4",
+      "timeline_video_in": 21.50,
+      "timeline_video_out": 29.50,
+      "clip_seek_in": 0.50,
+      "fade_in_sec": 0.25,
+      "fade_out_sec": 0.25,
+      "cut_type": "L-CUT",
+      "narrative_note": "Sotuba warehouse tracking shot overlays logistical efficiency statement"
+    },
+    {
+      "scene_id": "BR_04_VOICE_WAVEFORM_BOGOLAN",
+      "clip_path": "assets/raw/runway_br04_waveform.mp4",
+      "timeline_video_in": 30.50,
+      "timeline_video_out": 36.50,
+      "clip_seek_in": 1.20,
+      "fade_in_sec": 0.30,
+      "fade_out_sec": 0.30,
+      "cut_type": "J-CUT",
+      "narrative_note": "Bogolan acoustic macro bridges HG_SEG_03 and HG_SEG_04"
+    },
+    {
+      "scene_id": "BR_05_MERCHANT_FINTECH_MOBILE",
+      "clip_path": "assets/raw/runway_br05_merchant.mp4",
+      "timeline_video_in": 38.00,
+      "timeline_video_out": 45.00,
+      "clip_seek_in": 0.80,
+      "fade_in_sec": 0.25,
+      "fade_out_sec": 0.35,
+      "cut_type": "L-CUT",
+      "narrative_note": "Visual lingers 0.5s into CTA segment HG_SEG_05"
+    },
+    {
+      "scene_id": "BR_06_BAARA_HORIZON_OUTRO",
+      "clip_path": "assets/raw/runway_br06_horizon.mp4",
+      "timeline_video_in": 49.00,
+      "timeline_video_out": 56.00,
+      "clip_seek_in": 0.50,
+      "fade_in_sec": 0.35,
+      "fade_out_sec": 0.50,
+      "cut_type": "J-CUT",
+      "narrative_note": "Final 'Rejoignez baara point A-I' lands as visual dissolves back to presenter eye-lock"
+    }
+  ]
+}

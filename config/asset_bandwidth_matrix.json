@@ -1,0 +1,102 @@
+{
+  "project": "baara.ai",
+  "region": "Bamako, Mali (West African Mobile Edge)",
+  "frameRate": 24,
+  "gopFrames": 48,
+  "segmentDurationSeconds": 2.0,
+  "containerFormat": "CMAF (fMP4 .m4s + init.mp4)",
+  "colorScience": {
+    "terracotta": { "hex": "#C85A32", "rgb": [200, 90, 50], "cieLab": [50.62, 41.51, 41.22] },
+    "maliGold": { "hex": "#E5A93C", "rgb": [229, 169, 60], "cieLab": [72.88, 12.39, 59.58] },
+    "deepIndigo": { "hex": "#0B132B", "rgb": [11, 19, 43], "cieLab": [6.31, 4.82, -16.94] }
+  },
+  "abrLadder": [
+    {
+      "tierId": "T0_360p_3G",
+      "targetNetwork": "3G HSPA+ (< 800 kbps)",
+      "width": 640,
+      "height": 360,
+      "fps": 24,
+      "codecs": {
+        "primaryAv1": "av01.0.01M.08",
+        "fallbackHevc": "hvc1.1.6.L63.90",
+        "fallbackAvc": "avc1.4D401E"
+      },
+      "videoBitrateKbps": 240,
+      "videoMaxrateKbps": 340,
+      "videoBufsizeKbps": 680,
+      "audioBitrateKbps": 32,
+      "audioChannels": 1,
+      "estimatedSegmentSizeKB": 68
+    },
+    {
+      "tierId": "T1_480p_Edge",
+      "targetNetwork": "3G+ / Congested 4G (1.5 Mbps)",
+      "width": 854,
+      "height": 480,
+      "fps": 24,
+      "codecs": {
+        "primaryAv1": "av01.0.04M.08",
+        "fallbackHevc": "hvc1.1.6.L90.90",
+        "fallbackAvc": "avc1.4D401F"
+      },
+      "videoBitrateKbps": 480,
+      "videoMaxrateKbps": 680,
+      "videoBufsizeKbps": 1360,
+      "audioBitrateKbps": 48,
+      "audioChannels": 2,
+      "estimatedSegmentSizeKB": 132
+    },
+    {
+      "tierId": "T2_720p_4G",
+      "targetNetwork": "Stable 4G LTE (3.0 Mbps)",
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "codecs": {
+        "primaryAv1": "av01.0.05M.08",
+        "fallbackHevc": "hvc1.1.6.L93.90",
+        "fallbackAvc": "avc1.64001F"
+      },
+      "videoBitrateKbps": 950,
+      "videoMaxrateKbps": 1350,
+      "videoBufsizeKbps": 2700,
+      "audioBitrateKbps": 64,
+      "audioChannels": 2,
+      "estimatedSegmentSizeKB": 253
+    },
+    {
+      "tierId": "T3_1080p_HD",
+      "targetNetwork": "Fiber / Wi-Fi (> 5.0 Mbps)",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24,
+      "codecs": {
+        "primaryAv1": "av01.0.08M.10",
+        "fallbackHevc": "hvc1.2.4.L120.90",
+        "fallbackAvc": "avc1.640028"
+      },
+      "videoBitrateKbps": 1850,
+      "videoMaxrateKbps": 2600,
+      "videoBufsizeKbps": 5200,
+      "audioBitrateKbps": 96,
+      "audioChannels": 2,
+      "estimatedSegmentSizeKB": 486
+    }
+  ],
+  "payloadBudgets": {
+    "criticalHtmlCssJsMaxKB": 45,
+    "posterFrameMaxKB": 28,
+    "animatedWebpFallbackMaxKB": 145,
+    "startupVideoBufferMaxKB": 210,
+    "totalFirstRenderMaxKB": 295,
+    "maxForwardBufferSeconds": 6.0,
+    "targetTimeToFirstFrameMs": 1400
+  },
+  "fallbackMatrix": {
+    "posterPath": "dist/poster-sahel-hero.webp",
+    "animatedStoryboardPath": "dist/storyboard-loop.webp",
+    "audioOnlyLitePath": "dist/audio-only-lite.m4a",
+    "serviceWorkerCacheLimitMB": 25
+  }
+}

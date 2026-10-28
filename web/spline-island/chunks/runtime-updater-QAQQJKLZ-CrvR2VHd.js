@@ -1,0 +1,1 @@
+import"./runtime-chunk-KPOUV3HD-doukmKQV.js";export{m as updateAllMaterials,jt as updateDocumentSchema,Ft as updateLibSchema,w as updateMaterialSchema,L as updateObjectStateRec,d as updateObjectsSchema,a as updateTextValues}from"./runtime-chunk-NY4SLVL4-CzPYWxUn.js";

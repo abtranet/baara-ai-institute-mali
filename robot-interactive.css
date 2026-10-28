@@ -1,0 +1,439 @@
+/**
+ * baara.ai — Hybrid Progressive Hero Robot Styles
+ * Handles 2.5D Parallax Physics, Visor Glow, Multilingual Speech Bubble,
+ * Responsive Mobile Presentation, and Spline 3D Crossfade.
+ */
+
+/* Container wrapper setup */
+.baara-hero-robot-wrapper {
+  position: relative;
+  perspective: 1000px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 2.5D Interactive Layer */
+.baara-robot-25d-wrap {
+  position: relative;
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transition-timing-function: linear(0, 0.016 0.5%, 0.06 1%, 0.226 2%, 1.116 5.4%, 1.375 6.6%, 1.527 7.7%, 1.565 8.2%, 1.585 8.8%, 1.581 9.3%, 1.559 9.8%, 1.458 10.9%, 0.937 14.3%, 0.784 15.5%, 0.693 16.6%, 0.67 17.1%, 0.657 17.7%, 0.671 18.7%, 0.729 19.8%, 1.042 23.3%, 1.13 24.5%, 1.182 25.6%, 1.201 26.7%, 1.192 27.7%, 1.156 28.8%, 0.977 32.2%, 0.925 33.4%, 0.894 34.5%, 0.882 35.6%, 0.887 36.6%, 0.907 37.7%, 1.045 42.4%, 1.069 44.5%, 1.059 46.3%, 0.979 50.9%, 0.96 53.4%, 0.966 55.3%, 1.013 59.9%, 1.024 62.3%, 0.986 71.2%, 1.008 79.9%, 0.995 88.9%, 1);
+  animation: baaraRobotBreathing 6s ease-in-out infinite;
+}
+
+.baara-hero-robot-wrapper[data-spline-ready="true"][data-spline-active="true"] .baara-robot-25d-wrap {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes baaraRobotBreathing {
+  0%, 100% {
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 25px 40px rgba(109, 48, 251, 0.35));
+  }
+}
+
+.baara-robot-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  pointer-events: auto;
+}
+
+/* =========================================================
+   Interactive Cybernetic Robot Eyes (Autonomous & Responsive Blinking)
+   ========================================================= */
+.baara-robot-eyes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 8;
+}
+
+.baara-robot-eyes .baara-eye {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at center, #ffffff 30%, #38bdf8 70%, #0284c7 100%);
+  box-shadow: 
+    0 0 6px #38bdf8,
+    0 0 14px rgba(56, 189, 248, 0.85),
+    0 0 26px rgba(109, 48, 251, 0.6);
+  animation: baaraLifelikeBlink 4.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+/* Coordinates for Black 3D Robot Visor */
+.baara-robot-eyes.mode-black .baara-eye-left {
+  top: 22.8%;
+  left: 44.2%;
+  width: 3.5%;
+  height: 2.3%;
+}
+
+.baara-robot-eyes.mode-black .baara-eye-right {
+  top: 23.5%;
+  left: 56.4%;
+  width: 3.5%;
+  height: 2.3%;
+}
+
+/* Coordinates for Malian / White 3D Robot Visor */
+.baara-robot-eyes.mode-malian .baara-eye-left {
+  top: 27.6%;
+  left: 43.2%;
+  width: 3.6%;
+  height: 2.4%;
+}
+
+.baara-robot-eyes.mode-malian .baara-eye-right {
+  top: 32.8%;
+  left: 57.5%;
+  width: 3.6%;
+  height: 2.4%;
+}
+
+/* Natural robotic double-blink timing sequence */
+@keyframes baaraLifelikeBlink {
+  0%, 86%, 92%, 96%, 100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 0.95;
+    filter: brightness(1);
+  }
+  89% {
+    transform: scaleY(0.06) scaleX(1.15);
+    opacity: 0.15;
+    filter: brightness(0.4);
+  }
+  94% {
+    transform: scaleY(0.06) scaleX(1.15);
+    opacity: 0.15;
+    filter: brightness(0.4);
+  }
+}
+
+.baara-robot-eyes.baara-eye-blink-now .baara-eye {
+  animation: none !important;
+  transform: scaleY(0.06) scaleX(1.15) !important;
+  opacity: 0.15 !important;
+  transition: transform 0.09s ease, opacity 0.09s ease !important;
+}
+
+/* Dynamic Visor Glow / Specular Sheen */
+.baara-robot-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    circle 180px at var(--glow-x, 50%) var(--glow-y, 40%),
+    rgba(229, 169, 60, 0.35) 0%,
+    rgba(109, 48, 251, 0.15) 45%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+}
+
+/* 3D Spline Island Mount Layer */
+.baara-hero-spline-mount {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: visible;
+  border-radius: 0 0 30px 0;
+}
+
+.baara-hero-spline-inner {
+  transform: scale(1.02) translateY(-40px);
+  transform-origin: 50% 15%;
+}
+
+.baara-hero-robot-wrapper[data-spline-ready="true"][data-spline-active="true"] .baara-hero-spline-mount {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Multilingual Interactive Speech Bubble */
+.baara-robot-speech-bubble {
+  position: absolute;
+  top: 14%;
+  left: -90px;
+  z-index: 25;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 330px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: rgba(1, 15, 52, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(229, 169, 60, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(109, 48, 251, 0.25);
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.92);
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.35s;
+  pointer-events: none;
+}
+
+.baara-robot-speech-bubble.baara-bubble-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.speech-avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6d30fb, #d5313d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(109, 48, 251, 0.4);
+}
+
+.speech-pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid #e5a93c;
+  animation: baaraPulse 2.4s infinite;
+}
+
+@keyframes baaraPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.speech-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.speech-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.speech-name {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #e5a93c;
+}
+
+.speech-lang-pill {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #b8c2dc;
+}
+
+.speech-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #f1f4f9;
+  margin: 0 0 10px 0;
+}
+
+.speech-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.speech-btn-primary {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #d5313d, #6d30fb);
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.speech-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(213, 49, 61, 0.4);
+}
+
+.speech-btn-audio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5a93c;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.speech-btn-audio:hover {
+  background: rgba(229, 169, 60, 0.2);
+  transform: scale(1.08);
+}
+
+.speech-close-btn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #8fa0c2;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.speech-close-btn:hover {
+  color: #fff;
+}
+
+/* Interactive Mode Controls Badge */
+.baara-robot-controls {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  z-index: 25;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.baara-robot-controls .baara-lang-switch {
+  margin-right: 0;
+  background: rgba(1, 15, 52, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 169, 60, 0.4);
+}
+
+.baara-robot-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(1, 15, 52, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 169, 60, 0.4);
+  color: #f1f4f9;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.baara-robot-mode-btn:hover {
+  background: rgba(1, 15, 52, 0.95);
+  border-color: #e5a93c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 169, 60, 0.3);
+}
+
+.baara-robot-mode-btn .status-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #20c997;
+  box-shadow: 0 0 8px #20c997;
+}
+
+/* =========================================================
+   Responsive Overrides for Mobile & Tablet (<1200px)
+   ========================================================= */
+@media screen and (max-width: 1199.98px) {
+  /* Display the interactive robot on mobile below the hero KPIs */
+  .baara-hero_one .hero-wrapper .hero-image {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    top: auto !important;
+    margin: 36px auto 0 !important;
+    max-width: 360px !important;
+    width: 100% !important;
+  }
+
+  .baara-robot-speech-bubble {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 14px;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .baara-hero-spline-mount {
+    min-height: 380px;
+  }
+
+  .baara-robot-controls {
+    bottom: 8px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* =========================================================
+   Accessibility: prefers-reduced-motion
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  .baara-robot-25d-wrap {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .baara-robot-eyes .baara-eye {
+    animation: none !important;
+  }
+  .speech-pulse {
+    animation: none !important;
+  }
+  .baara-robot-glow {
+    display: none !important;
+  }
+  .baara-robot-speech-bubble {
+    transition: opacity 0.2s ease !important;
+    transform: none !important;
+  }
+}

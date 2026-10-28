@@ -1,0 +1,23 @@
+{
+  "name": "baara-ai-institute-mali",
+  "version": "1.0.0",
+  "private": true,
+  "description": "baara.ai — AI Institute of Mali (working name): A job-first AI school and open Bambara NLP Lab in Bamako, Mali.",
+  "scripts": {
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.4"
+  }
+}

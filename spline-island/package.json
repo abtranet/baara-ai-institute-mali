@@ -1,0 +1,32 @@
+{
+  "name": "baara-spline-island",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "React + TypeScript + Tailwind + shadcn island that renders the interactive Spline 3D scene inside the #projects section of the static baara.ai page. Builds into ../web/spline-island/.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^2.0.111",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.1.2",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}
