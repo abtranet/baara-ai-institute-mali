@@ -1,1 +1,2037 @@
-../index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        try {
+          var p = new URLSearchParams(window.location.search).get('lang');
+          var s = localStorage.getItem('baara_lang');
+          var n = (navigator.language || '').toLowerCase();
+          if (p === 'fr' || (!p && (s === 'fr' || (!s && n.startsWith('fr'))))) {
+            document.documentElement.lang = 'fr';
+          }
+        } catch(e) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>baara.ai — AI Institute of Mali | Job-First AI School &amp; Bambara NLP Lab in Bamako</title>
+    <meta
+      name="description"
+      content="Malian youth, building AI in their own languages. A job-first AI school in Bamako taking 300 learners per year from no digital skills to paid work across 4 tracks, with an open lab for Bambara language AI."
+    />
+    <!-- WhatsApp, Open Graph & Social Share Preview Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BAARA — AI Institute of Mali" />
+    <meta property="og:title" content="baara.ai — AI Institute of Mali | Job-First AI School &amp; Bambara NLP Lab" />
+    <meta
+      property="og:description"
+      content="Malian youth, building AI in their own languages. Four tracks take learners from no digital skills to paid work in Bamako, with an open lab for Bambara language AI."
+    />
+    <meta property="og:image" content="/assets/images/home-one/logo/baara-whatsapp-og.jpg" />
+    <meta property="og:image:secure_url" content="/assets/images/home-one/logo/baara-whatsapp-og.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="BAARA Cloud Solutions — AI Institute of Mali" />
+    <meta itemprop="image" content="/assets/images/home-one/logo/baara-whatsapp-og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="baara.ai — AI Institute of Mali | Job-First AI School in Bamako" />
+    <meta
+      name="twitter:description"
+      content="Malian youth, building AI in their own languages. Four tracks from no digital skills to paid work, with an open Bambara NLP Lab."
+    />
+    <meta name="twitter:image" content="/assets/images/home-one/logo/baara-whatsapp-og.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" crossorigin="" href="/assets/index-CY-FFDRZ.css" />
+    <link rel="stylesheet" href="/web/sections.css" />
+    <link rel="stylesheet" href="/web/robot-interactive.css" />
+    <link rel="stylesheet" href="/web/spline-island/island.css" />
+    <style>
+      html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+      }
+      /* Ensure AOS elements are immediately visible without flicker and smooth transitions work */
+      [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: transform 0.35s ease, opacity 0.35s ease;
+      }
+      /* Solid Frosted Deep-Navy Sticky Header Bar (prevents text jumbling over light sections) */
+      .cs_site_header.header_style_2_1,
+      .cs_site_header.cs_sticky_header {
+        top: 0 !important;
+        background: rgba(1, 15, 52, 0.96) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 32px rgba(1, 15, 52, 0.45);
+        transition: background-color 0.25s ease, box-shadow 0.25s ease;
+      }
+      .cs_site_header.header_style_2_1 .cs_main_header_in {
+        height: 88px;
+      }
+      /* Crisp readable dropdown menus in the navigation bar */
+      .cs_nav .cs_nav_list > li > a {
+        color: #ffffff !important;
+      }
+      .cs_nav .cs_nav_list > li > a:hover {
+        color: #fbbf24 !important;
+      }
+      .cs_nav .cs_nav_list ul {
+        background-color: #061642 !important;
+        border-top: 2px solid #f59e0b !important;
+        border-radius: 0 0 12px 12px !important;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5) !important;
+      }
+      .cs_nav .cs_nav_list ul li a {
+        color: #e2e8f0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        font-size: 14.5px;
+      }
+      .cs_nav .cs_nav_list ul li a:hover {
+        color: #fbbf24 !important;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      /* Prevent anchored sections from hiding under the fixed 88px header */
+      section[id] {
+        scroll-margin-top: 104px;
+      }
+      /* Fix marquee text overlap: force both scroll tracks to have identical width and zero flex-shrink */
+      .animated-text-slide {
+        display: flex !important;
+        align-items: center !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        white-space: nowrap !important;
+      }
+      .animated-text-slide .baara-scroll-text {
+        display: flex !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+        flex-shrink: 0 !important;
+        min-width: max-content !important;
+        white-space: nowrap !important;
+        will-change: transform;
+        -webkit-animation: baaraMarqueeScroll 45s linear infinite !important;
+        animation: baaraMarqueeScroll 45s linear infinite !important;
+      }
+      .animated-text-slide .scroll-text-inner {
+        display: inline-flex !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+        flex-shrink: 0 !important;
+        line-height: 1.1 !important;
+        padding-right: 28px !important;
+      }
+      .animated-text-slide .scroll-text-inner .text {
+        white-space: nowrap !important;
+      }
+      .animated-text-slide .scroll-text-inner .icon {
+        display: inline-flex !important;
+        align-items: center !important;
+        margin-left: 28px !important;
+        margin-right: 0 !important;
+      }
+      @-webkit-keyframes baaraMarqueeScroll {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      @keyframes baaraMarqueeScroll {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      /* Ensure equal card height and aligned author footers in Impact & Open Access cards */
+      .baara-testimonial-item.style-one {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .baara-testimonial-item.style-one .testimonial-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .baara-testimonial-item.style-one .author-info-quote-wrap {
+        margin-top: auto;
+        gap: 16px;
+      }
+      .baara-testimonial-item.style-one .author-info-quote-wrap .quote {
+        flex-shrink: 0;
+      }
+      /* Make Black Malian woman portraits prominent in Impact & Open Access cards */
+      .baara-testimonial-item.style-one .author-thumb-item {
+        display: flex;
+        align-items: center;
+      }
+      .baara-testimonial-item.style-one .author-thumb-item .author-thumb {
+        width: 84px !important;
+        height: 84px !important;
+        flex: 0 0 84px !important;
+        margin-right: 18px !important;
+      }
+      .baara-testimonial-item.style-one .author-thumb-item .author-thumb img {
+        width: 84px !important;
+        height: 84px !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        object-position: center 18% !important;
+        border: 3px solid #6D30FB !important;
+        box-shadow: 0 8px 22px rgba(109, 48, 251, 0.24) !important;
+        background-color: #f4efe6;
+      }
+      .baara-testimonial_one .testimonial-image img {
+        object-fit: cover !important;
+        object-position: center top !important;
+      }
+      /* Equal-sized Founder Portraits positioned side-by-side in exact upload order */
+      .baara-founders-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .baara-founder-card {
+        background: #ffffff;
+        border: 1px solid rgba(13, 14, 19, 0.08);
+        border-radius: 20px;
+        padding: 18px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 14px 36px rgba(1, 15, 52, 0.07);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        cursor: pointer;
+      }
+      .baara-founder-card:hover,
+      .baara-founder-card.active {
+        transform: translateY(-4px);
+        border-color: #6D30FB;
+        box-shadow: 0 18px 44px rgba(109, 48, 251, 0.16);
+      }
+      .baara-founder-photo-wrap {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        height: 400px;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #f1f5f9;
+        margin-bottom: 18px;
+        flex-shrink: 0;
+      }
+      .baara-founder-photo-wrap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        display: block;
+      }
+      .baara-founder-card-body {
+        text-align: center;
+        padding: 4px 8px 6px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .baara-founder-card-body h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #010F34;
+        margin-bottom: 6px;
+      }
+      .baara-founder-card-body .position {
+        font-size: 14.5px;
+        font-weight: 600;
+        color: #6D30FB;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .baara-founder-card-body p {
+        font-size: 14.5px;
+        line-height: 1.6;
+        color: #475569;
+        margin-bottom: 0;
+      }
+      .baara-team_one .member-image {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        height: 400px;
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      .baara-team_one .member-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+      }
+      /* Header Navigation Layout & Spacing */
+      @media screen and (min-width: 1400px) {
+        .cs_main_header_center {
+          left: 43% !important;
+        }
+        .cs_nav .cs_nav_list > li {
+          margin-right: 20px !important;
+        }
+        .cs_nav .cs_nav_list > li > a {
+          font-size: 15px !important;
+        }
+      }
+      @media screen and (min-width: 1200px) and (max-width: 1399.98px) {
+        .cs_main_header_center {
+          left: 40% !important;
+        }
+        .cs_nav .cs_nav_list > li {
+          margin-right: 12px !important;
+        }
+        .cs_nav .cs_nav_list > li > a {
+          font-size: 13.5px !important;
+        }
+        .baara-lang-switch {
+          margin-right: 8px !important;
+        }
+      }
+      /* Header Layout & Stacking Context - Guarantee unhindered clicks for language switcher */
+      .cs_main_header_right {
+        position: relative !important;
+        z-index: 100 !important;
+      }
+      .cs_main_header_right .header-btn {
+        position: relative !important;
+        z-index: 101 !important;
+      }
+      .cs_main_header_center {
+        pointer-events: none !important;
+      }
+      .cs_main_header_center .cs_nav {
+        pointer-events: auto !important;
+      }
+      /* Language Switcher & Launch Film Modal Trigger in Header */
+      .baara-lang-switch {
+        display: inline-flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 30px;
+        padding: 3px;
+        margin-right: 14px;
+        position: relative;
+        z-index: 102;
+        pointer-events: auto;
+      }
+      .baara-lang-btn {
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        position: relative;
+        z-index: 103;
+        pointer-events: auto;
+        user-select: none;
+      }
+      .baara-lang-btn:hover {
+        color: #fbbf24;
+      }
+      .baara-lang-btn.active {
+        background: linear-gradient(90deg, #6D30FB 0%, #D5313D 100%);
+        color: #ffffff !important;
+      }
+      /* Guarantee language switcher is ALWAYS visible across ALL screen widths (including <1200px) */
+      @media screen and (max-width: 1199.98px) {
+        .cs_site_header.cs_style_1 .cs_main_header_right,
+        .cs_main_header_right {
+          display: flex !important;
+          align-items: center !important;
+          padding-right: 48px !important;
+        }
+        .cs_main_header_right .header-btn {
+          display: flex !important;
+          align-items: center !important;
+        }
+        .cs_main_header_right .main-button {
+          display: none !important;
+        }
+        .baara-lang-switch {
+          display: inline-flex !important;
+          margin-right: 0 !important;
+        }
+        .cs_nav .cs_nav_list.cs_active,
+        .cs_nav .cs-munu_toggle.cs_toggle_active + .cs_nav_list,
+        .cs_nav .cs-munu_toggle.cs_teggle_active + .cs_nav_list {
+          display: block !important;
+        }
+      }
+      /* Floating Quick Language Dock (Always accessible at bottom-left) */
+      .baara-floating-lang-dock {
+        position: fixed;
+        bottom: 22px;
+        left: 22px;
+        z-index: 9999;
+        background: rgba(1, 15, 52, 0.92);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(229, 169, 60, 0.45);
+        border-radius: 30px;
+        padding: 4px 8px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .baara-floating-lang-dock:hover {
+        border-color: #e5a93c;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 36px rgba(109, 48, 251, 0.45);
+      }
+      .baara-floating-lang-dock .baara-lang-switch {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .baara-floating-lang-dock .baara-floating-label {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        color: #e5a93c;
+        letter-spacing: 0.5px;
+        padding-left: 4px;
+        padding-right: 2px;
+        user-select: none;
+      }
+      /* Hero KPI Pills */
+      .baara-hero-kpis {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .baara-kpi-pill {
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 14px;
+        padding: 14px 16px;
+        backdrop-filter: blur(8px);
+      }
+      .baara-kpi-pill strong {
+        display: block;
+        font-size: 26px;
+        line-height: 1.1;
+        color: #ffffff;
+        font-family: "Ubuntu", sans-serif;
+      }
+      .baara-kpi-pill span {
+        display: block;
+        font-size: 12.5px;
+        color: #d2daf0;
+        margin-top: 4px;
+        line-height: 1.35;
+      }
+      /* =========================================================
+         Program & 4 Learning Tracks Typography & Readability
+         ========================================================= */
+      .baara-service_one .container-fluid {
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+        max-width: 1680px;
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 991.98px) {
+        .baara-service_one .container-fluid {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      }
+      .baara-service_one .section-title p {
+        font-size: 19px !important;
+        line-height: 1.7 !important;
+        color: #e2e8f8 !important;
+        max-width: 860px;
+        margin: 16px auto 0 !important;
+      }
+      .baara-service_one .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+      }
+      .baara-service_one .item-column {
+        display: flex !important;
+        flex-direction: column !important;
+        margin-bottom: 28px;
+      }
+      .baara-service-card {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        height: 100% !important;
+        border-radius: 24px !important;
+        padding: 34px 28px 30px !important;
+        border: 1px solid rgba(255, 255, 255, 0.16) !important;
+        background: rgba(255, 255, 255, 0.04) !important;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transition: all 0.3s ease;
+      }
+      .baara-service-card.item-active,
+      .baara-service-card:hover {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+        border-color: rgba(229, 169, 60, 0.55) !important;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45), 0 0 25px rgba(109, 48, 251, 0.28) !important;
+      }
+      .baara-service-card .content {
+        display: flex !important;
+        flex-direction: column !important;
+        flex: 1 1 auto !important;
+        height: 100% !important;
+      }
+      .baara-track-badge {
+        display: inline-block;
+        align-self: flex-start;
+        font-size: 13.5px !important;
+        font-weight: 800 !important;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        padding: 7px 15px !important;
+        border-radius: 999px;
+        background: rgba(245, 158, 11, 0.22) !important;
+        color: #fde68a !important;
+        border: 1px solid rgba(245, 158, 11, 0.6) !important;
+        margin-bottom: 20px !important;
+        line-height: 1.25;
+      }
+      .baara-service-card .content p {
+        flex: 1 1 auto !important;
+        font-size: 16.5px !important;
+        line-height: 1.7 !important;
+        color: #f8fafc !important;
+        font-weight: 400;
+        height: auto !important;
+        min-height: 240px;
+        padding-bottom: 24px !important;
+      }
+      .baara-exit-tag {
+        display: block;
+        margin-top: 18px !important;
+        padding-top: 14px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
+        font-size: 15px !important;
+        line-height: 1.45 !important;
+        color: #67e8f9 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.02em;
+      }
+      .baara-service-card .content .icon {
+        margin-top: auto !important;
+        margin-bottom: 20px !important;
+      }
+      .baara-service-card .content .title {
+        font-size: 26px !important;
+        font-weight: 700 !important;
+        line-height: 1.3 !important;
+        color: #ffffff !important;
+        margin-bottom: 0 !important;
+      }
+      .baara-service-card .content .title a {
+        color: #ffffff !important;
+        text-decoration: none;
+      }
+      .baara-service-card .content .title a:hover {
+        color: #e5a93c !important;
+      }
+      @media screen and (max-width: 1199.98px) {
+        .baara-service-card .content p {
+          min-height: auto !important;
+          height: auto !important;
+        }
+        .baara-service-card {
+          margin-bottom: 24px;
+        }
+      }
+      /* Video Modal Overlay for the 60s Bamako Edge Launch Spot */
+      .baara-video-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(1, 15, 52, 0.88);
+        backdrop-filter: blur(10px);
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .baara-video-modal.open {
+        display: flex;
+      }
+      .baara-modal-card {
+        background: #010F34;
+        border: 1px solid rgba(213, 49, 61, 0.45);
+        border-radius: 24px;
+        max-width: 960px;
+        width: 100%;
+        padding: 20px;
+        color: #fff;
+        box-shadow: 0 30px 90px rgba(0, 0, 0, 0.75);
+      }
+      .baara-modal-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .baara-close-btn {
+        background: #D5313D;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      /* Hero Spacing Optimization: eliminate excess blank void below the header */
+      .baara-hero_one .hero-wrapper .hero-content {
+        padding-top: 170px !important;
+        padding-bottom: 120px !important;
+      }
+      .baara-hero_one .hero-wrapper .hero-shape.shape-one {
+        top: 90px !important;
+      }
+      @media (max-width: 1650px) {
+        .baara-hero_one .hero-wrapper .hero-content {
+          padding-top: 155px !important;
+          padding-bottom: 105px !important;
+        }
+      }
+      @media screen and (max-width: 991.98px) {
+        .baara-hero_one .hero-wrapper .hero-content {
+          padding-top: 130px !important;
+          padding-bottom: 80px !important;
+        }
+      }
+      @media (max-width: 767.98px) {
+        .baara-hero_one .hero-wrapper .hero-content {
+          padding-top: 105px !important;
+          padding-bottom: 60px !important;
+        }
+      }
+
+      /* Hero Robot: Full original big size, contained strictly within purple hero boundary with full head and hands visible */
+      .baara-hero_one .hero-wrapper {
+        overflow: hidden !important;
+      }
+      @media (min-width: 1200px) {
+        .baara-hero_one .hero-wrapper .hero-image {
+          position: absolute !important;
+          top: 15px !important;
+          bottom: 35px !important;
+          right: 0 !important;
+          max-width: 780px !important;
+          width: 100% !important;
+          overflow: visible !important;
+          transition: top 0.3s ease;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="main-page-area2">
+        <!-- ==================== 1. HEADER ==================== -->
+        <div>
+          <header class="cs_site_header header_style_2 header_style_2_1 cs_style_1 header_sticky_style1 cs_sticky_header cs_site_header_full_width">
+            <div class="cs_main_header">
+              <div class="container-fluid">
+                <div class="cs_main_header_in">
+                  <div class="cs_main_header_left">
+                    <a class="cs_site_branding" href="#hero" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+                      <img
+                        alt="BAARA Cloud Solutions — AI Institute of Mali Logo"
+                        src="/assets/images/home-one/logo/baara-logo-cropped.png"
+                        width="104"
+                        height="80"
+                        style="height:78px;max-height:82px;width:auto;background:#ffffff;padding:6px 14px;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,0.32);object-fit:contain;transition:transform 0.2s ease, box-shadow 0.2s ease;"
+                      />
+                    </a>
+                  </div>
+                  <div class="cs_main_header_center">
+                    <div class="cs_nav cs_primary_font fw-medium">
+                      <span class="cs-munu_toggle"><span></span></span>
+                      <ul class="cs_nav_list fw-medium">
+                        <li class="baara-mobile-lang-item d-xl-none" style="padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <span style="font-size: 13px; color: #e5a93c; font-weight: 700;">🌐 Langue / Language:</span>
+                            <div class="baara-lang-switch" role="group" aria-label="Mobile drawer language selector">
+                              <button class="baara-lang-btn active" data-set-lang="en">EN</button>
+                              <button class="baara-lang-btn" data-set-lang="fr">FR</button>
+                              <button class="baara-lang-btn" data-set-lang="bm">BM</button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="#hero" data-i18n="nav_home">The School</a>
+                          <span class="cs-munu_dropdown_toggle"><span></span></span>
+                          <ul>
+                            <li><a href="#hero">Mission &amp; Overview</a></li>
+                            <li><a href="#about">Why Now: Mali in Focus</a></li>
+                            <li><a href="#resilience">Built for Mali (Solar &amp; Offline)</a></li>
+                          </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="#services" data-i18n="nav_services">4 Tracks</a>
+                          <span class="cs-munu_dropdown_toggle"><span></span></span>
+                          <ul>
+                            <li><a href="#services">Track 1–4 Job-First Curriculum</a></li>
+                            <li><a href="#careers" style="color:#0dcaf0 !important;font-weight:600;">Graduate Careers &amp; Mercor Jobs</a></li>
+                            <li><a href="#projects">Bambara NLP Lab (MALIBA-AI)</a></li>
+                            <li><a href="#process">2027–2028 Cohort Roadmap</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#pitch" data-i18n="nav_pitch">Our Model</a></li>
+                        <li class="menu-item-has-children">
+                          <a href="#pricing" data-i18n="nav_pages">Partnerships</a>
+                          <span class="cs-munu_dropdown_toggle"><span></span></span>
+                          <ul>
+                            <li><a href="#coalition">Ecosystem &amp; Research Pillars</a></li>
+                            <li><a href="#pricing">Scholarships &amp; Ways to Partner</a></li>
+                            <li><a href="#team">Founding Team &amp; Advisors</a></li>
+                            <li><a href="#testimonials">Impact &amp; Open Access</a></li>
+                          </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                          <a href="#blog" data-i18n="nav_blog">Briefs</a>
+                          <span class="cs-munu_dropdown_toggle"><span></span></span>
+                          <ul>
+                            <li><a href="#blog">Emerging AI Africa — Issue 01</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#contact" data-i18n="nav_contact">Take Part</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cs_main_header_right">
+                    <div class="header-btn d-flex align-items-center">
+                      <div class="baara-lang-switch" role="group" aria-label="Language selector">
+                        <button class="baara-lang-btn active" data-set-lang="en">EN</button>
+                        <button class="baara-lang-btn" data-set-lang="fr">FR</button>
+                        <button class="baara-lang-btn" data-set-lang="bm">BM</button>
+                      </div>
+                      <div class="main-button header-btn-1 nav-right-item">
+                        <a class="theme-btn gradient-btn" href="#contact">
+                          <span data-i18n="nav_cta">Partner With Us</span>
+                          <span class="cs_btn_icon"><i class="bi bi-arrow-right"></i></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+
+        <!-- ==================== 2. HERO SECTION ==================== -->
+        <div>
+          <section class="baara-hero_one" id="hero">
+            <div class="hero-wrapper bg_cover" style="background-image: url('/assets/images/home-one/hero/hero-bg.jpg');">
+              <div class="hero-shape shape-one">
+                <img alt="decorative shape" src="/assets/images/home-one/hero/hero-shape2.png" />
+              </div>
+              <div class="hero-shape shape-two">
+                <img alt="decorative shape" src="/assets/images/home-one/hero/hero-shape1.png" />
+              </div>
+              <div class="container-fluid">
+                <div class="row justify-content-center justify-content-xl-start">
+                  <div class="col-xl-6 col-lg-10">
+                    <div class="hero-content text-center text-xl-start">
+                      <span class="tag-line" data-aos="fade-down" data-aos-duration="1500" data-i18n="hero_tag">
+                        BAARA — AI Institute of Mali • Bamako, Mali • First Cohort 2027
+                      </span>
+                      <h1 class="text-anm" id="heroHeading">
+                        <span>Malian Youth,</span> Building AI In Their <span>Own Languages.</span>
+                      </h1>
+                      <p data-aos="fade-up" data-aos-duration="1500" data-i18n="hero_desc">
+                        A job-first AI school in Bamako. Four tracks take learners from no digital skills to paid work, with an open lab for Bambara language AI. Teaching is in French with Bambara support, and 70% of class time is hands-on project work.
+                      </p>
+                      <div class="hero-button-wrap">
+                        <div class="baara-button" data-aos="fade-up" data-aos-duration="1500" style="display:flex;gap:12px;flex-wrap:wrap;">
+                          <a class="theme-btn gradient-btn" href="#contact" data-i18n="hero_btn">
+                            Sponsor or Partner<i class="bi bi-arrow-right"></i>
+                          </a>
+                          <a class="theme-btn style-two" href="#pitch" style="border:1px solid rgba(255,255,255,0.3);color:#fff;padding:14px 22px;border-radius:30px;text-decoration:none;font-weight:600;">
+                            Explore Our Model
+                          </a>
+                          <button
+                            type="button"
+                            id="openVideoModalBtn"
+                            class="theme-btn gradient-btn"
+                            style="border:none;cursor:pointer;"
+                          >
+                            ▶ Watch 60s Campus Preview
+                          </button>
+                        </div>
+                      </div>
+                      <div class="baara-hero-kpis" aria-label="Key school indicators">
+                        <div class="baara-kpi-pill">
+                          <strong data-i18n="hero_kpi1_val">300 / yr</strong>
+                          <span data-i18n="hero_kpi1_lbl">Learners per year from 2028 (88 in 2027 Pilot)</span>
+                        </div>
+                        <div class="baara-kpi-pill">
+                          <strong data-i18n="hero_kpi2_val">4 Tracks</strong>
+                          <span data-i18n="hero_kpi2_lbl">Each learning track ends in a paid job exit</span>
+                        </div>
+                        <div class="baara-kpi-pill">
+                          <strong data-i18n="hero_kpi3_val">50% Women</strong>
+                          <span data-i18n="hero_kpi3_lbl">Target share of women learners across cohorts</span>
+                        </div>
+                        <div class="baara-kpi-pill">
+                          <strong data-i18n="hero_kpi4_val">$1,500</strong>
+                          <span data-i18n="hero_kpi4_lbl">Named scholarship per learner (first lesson to job)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-10">
+                    <div class="hero-image baara-hero-robot-wrapper" id="heroRobotContainer" data-spline-active="true">
+                      <!-- 2.5D Interactive Layer (Instant fallback while 3D scene renders) -->
+                      <div class="baara-robot-25d-wrap" id="robot25dWrap" title="Cliquez ou survolez pour interagir avec le robot BAARA">
+                        <img
+                          id="heroRobotImg"
+                          alt="Malian youth learning applied AI and Bambara NLP in Bamako"
+                          src="/assets/images/home-one/hero/hero-robot-black.png"
+                          fetchpriority="high"
+                          class="baara-robot-img"
+                        />
+                        <div class="baara-robot-glow" aria-hidden="true"></div>
+                        <!-- Cybernetic Blinking Eyes Overlay -->
+                        <div class="baara-robot-eyes mode-black" id="robotEyesOverlay" aria-hidden="true">
+                          <span class="baara-eye baara-eye-left"></span>
+                          <span class="baara-eye baara-eye-right"></span>
+                        </div>
+                      </div>
+
+                      <!-- 3D Spline Island Mount (Interactive 3D Robot Version) -->
+                      <div id="hero-spline-robot-root" class="baara-hero-spline-mount" style="display:block;" aria-hidden="false"></div>
+
+                      <!-- Interactive Controls Badge -->
+                      <div class="baara-robot-controls">
+                        <div class="baara-lang-switch baara-robot-lang-switch" role="group" aria-label="Robot language selector">
+                          <button class="baara-lang-btn active" data-set-lang="en">EN</button>
+                          <button class="baara-lang-btn" data-set-lang="fr">FR</button>
+                          <button class="baara-lang-btn" data-set-lang="bm">BM</button>
+                        </div>
+                        <button type="button" class="baara-robot-mode-btn" id="robotModeToggle" aria-label="Changer de robot">
+                          <span class="status-indicator"></span>
+                          <span id="robotModeLabel">✦ Mode 3D Spline (Actif)</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 3. WHY NOW: MALI IN FOCUS (ABOUT SECTION) ==================== -->
+          <section class="baara-about_one pt-90 pb-120" id="about">
+            <div class="shape">
+              <img alt="decorative shape" src="/assets/images/home-one/about/about-shape.png" loading="lazy" />
+            </div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-10">
+                  <div class="baara-image-box mb-5 mb-xl-0">
+                    <div class="baara-image image_one" data-aos="fade-down" data-aos-duration="800">
+                      <img alt="Learners collaborating in Bamako classroom" src="/assets/images/home-one/about/about-img1.jpg" loading="lazy" />
+                    </div>
+                    <div class="baara-image image_two" data-aos="fade-up" data-aos-duration="1000">
+                      <img alt="Hands-on data and AI project training" src="/assets/images/home-one/about/about-img2.png" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-10">
+                  <div class="baara-content-box">
+                    <div class="section-title">
+                      <span class="sub-title" data-aos="fade-down" data-aos-duration="1000" data-i18n="about_sub">Why Now • Mali in Focus</span>
+                      <h2 class="text-anm" data-i18n="about_title">The Talent Is Ready. We Build the Path From Zero Digital Skills to Paid AI Work.</h2>
+                    </div>
+                    <p class="mb-30" data-aos="fade-up" data-aos-duration="1200" data-i18n="about_desc">
+                      In September 2026, Mali opened the new site of its national AI and robotics center, CIAR-Mali, and the government announced an annual national AI forum for youth. The talent is ready. What is missing is a practical path from no digital skills to paid AI work. BAARA — the AI Institute of Mali — builds that path in Bamako.
+                    </p>
+                    <ul class="check-list gradient-check mb-30" data-aos="fade-up" data-aos-duration="1400">
+                      <li><i class="bi bi-check-circle-fill"></i><span data-i18n="about_li1"><strong>Start Where You Are:</strong> Learners can stop after any track with a job-ready skill, or pass the exit gate and continue.</span></li>
+                      <li><i class="bi bi-check-circle-fill"></i><span data-i18n="about_li2"><strong>70% Hands-On Project Work:</strong> Taught in French with Bambara support using real Malian market, rainfall, and clinic datasets.</span></li>
+                      <li><i class="bi bi-check-circle-fill"></i><span data-i18n="about_li3"><strong>50% Target Share of Women Learners:</strong> Supported by learner stipends, transport allowances, and shared solar-backed laptops.</span></li>
+                    </ul>
+                    <div class="baara-button" data-aos="fade-up" data-aos-duration="1600">
+                      <a class="theme-btn gradient-btn" href="#services">
+                        <span data-i18n="about_btn">Explore the 4 Learning Tracks</span><i class="bi bi-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 4. THE PROGRAM: FOUR LEARNING TRACKS ==================== -->
+          <section class="baara-service_one bg_cover pt-115 pb-120" id="services" style="background-image: url('/assets/images/home-one/bg/service-bg.jpg');">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                  <div class="section-title text-center text-white mb-45">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000" data-i18n="srv_sub">The Program • 4 Stackable Tracks</span>
+                    <h2 class="text-anm" data-i18n="srv_title">Four Tracks. Each One Ends in Paid Work.</h2>
+                    <p style="color:#d2daf0;margin-top:14px;">
+                      Learners start where they are. They can exit into employment after any track with a verified portfolio, or pass the exit gate to advance to the next track.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xl-3 col-md-6 col-sm-12 item-column">
+                  <div class="baara-service-card item-active" data-aos="fade-up" data-aos-duration="800">
+                    <div class="content">
+                      <span class="baara-track-badge">Track 1 • 8 Weeks • Start Here</span>
+                      <p>
+                        Use a laptop, spreadsheets, and real local data: market prices, rainfall, and clinic visits. Builds foundational digital fluency from zero prior computer experience.
+                        <span class="baara-exit-tag">↳ Exit to: Data Entry, Office Assistant</span>
+                      </p>
+                      <div class="icon"><img alt="Track 1 icon" src="/assets/images/home-one/icon/icon1.png" loading="lazy" /></div>
+                      <h3 class="title"><a href="#contact">Digital &amp; Data Foundations</a></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 item-column">
+                  <div class="baara-service-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="content">
+                      <span class="baara-track-badge">Track 2 • 6 Weeks • Then</span>
+                      <p>
+                        Write structured prompts, audit AI output for errors and hallucinations, and use AI workflows for business reports, French/Bambara translation, and customer messages.
+                        <span class="baara-exit-tag">↳ Exit to: AI-Assisted Admin, Content, Support</span>
+                      </p>
+                      <div class="icon"><img alt="Track 2 icon" src="/assets/images/home-one/icon/icon2.png" loading="lazy" /></div>
+                      <h3 class="title"><a href="#contact">Applied AI for Work</a></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 item-column">
+                  <div class="baara-service-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="content">
+                      <span class="baara-track-badge">Track 3 • 16 Weeks • Go Deeper</span>
+                      <p>
+                        Master Python, data analysis, Git, and machine learning engineering — culminating in a supervised capstone model built and evaluated on a real Malian dataset.
+                        <span class="baara-exit-tag">↳ Exit to: Junior Data Analyst, Junior ML Developer</span>
+                      </p>
+                      <div class="icon"><img alt="Track 3 icon" src="/assets/images/home-one/icon/icon3.png" loading="lazy" /></div>
+                      <h3 class="title"><a href="#contact">Python &amp; Machine Learning</a></h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 item-column">
+                  <div class="baara-service-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="content">
+                      <span class="baara-track-badge">Track 4 • 24-Week Fellowship</span>
+                      <p>
+                        Collect Bambara speech and text, train speech recognition (ASR) and translation models, and publish open datasets and weights under public licenses with contributor credit.
+                        <span class="baara-exit-tag">↳ Exit to: NLP Engineer, Research Assistant</span>
+                      </p>
+                      <div class="icon"><img alt="Track 4 icon" src="/assets/images/home-one/icon/icon4.png" loading="lazy" /></div>
+                      <h3 class="title"><a href="#projects">Bambara NLP Lab</a></h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== GRADUATE CAREER PATHWAYS & MERCOR PLACEMENT ====================
+               Rendered from web/sections.js (bilingual data model) · styled in web/sections.css -->
+          <section class="baara-careers_one" id="careers" aria-labelledby="careers-heading">
+            <div class="container" id="careersMount"></div>
+          </section>
+
+          <!-- ==================== 5. INTERACTIVE SCHOOL MODEL & IMPACT DECK ====================
+               Rendered from web/sections.js (bilingual data model) · styled in web/sections.css -->
+          <section class="baara-pitch-sec" id="pitch" aria-labelledby="pitch-heading">
+            <div class="container" id="pitchMount"></div>
+          </section>
+
+          <!-- ==================== 6. BAMBARA NLP LAB & APPLIED USE CASES ACCORDION ==================== -->
+          <section class="baara-project_one pt-115 pb-110 p-r z-1" id="projects">
+            <div class="shape">
+              <img alt="decorative shape" src="/assets/images/home-one/project/shape.png" loading="lazy" />
+            </div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-10 text-center text-xl-start">
+                  <div class="section-title mb-4 mb-xl-5" data-aos="fade-down" data-aos-duration="1000">
+                    <span class="sub-title" data-i18n="proj_sub">Why a Bambara Lab • Open Malian AI</span>
+                  </div>
+                </div>
+                <div class="col-xl-7 col-lg-10">
+                  <div class="section-title mb-55 text-center text-xl-start">
+                    <h2 class="text-anm" data-i18n="proj_title">Inside the Bambara NLP Lab: AI in the Language Most Malians Speak Every Day</h2>
+                    <p style="margin-top:14px;">
+                      Most AI tools do not work well in Bambara. Our 24-week fellowship builds on open work by Malian researchers: the <strong>MALIBA-AI</strong> speech benchmark and the <strong>Bayelemabaga</strong> dataset of <strong>47,000 Bambara–French sentence pairs</strong>. Every dataset and model is released openly under public licenses, with credit to each Malian contributor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Interactive 3D Spline scene: React + TypeScript + Tailwind + shadcn island, source in /spline-island,
+                   built to /web/spline-island/. Mounted lazily when this block nears the viewport. -->
+              <div class="row">
+                <div class="col-12">
+                  <div id="spline-island-root"></div>
+                </div>
+              </div>
+              <div class="row justify-content-end">
+                <div class="col-xl-7 col-lg-12">
+                  <div class="project-wrapper" id="projectAccordion">
+                    <div class="baara-project-item style-one" data-aos="fade-up" data-aos-duration="1000">
+                      <div class="project-header" role="button" data-project-toggle="projectItem_0">
+                        <div class="project-title">
+                          <span>First Use Case 01 — Maternal &amp; Community Health:</span>
+                          <h3 class="title">Verified maternal health &amp; clinic triage information in spoken Bambara</h3>
+                        </div>
+                      </div>
+                      <div id="projectItem_0" class="accordion-collapse collapse">
+                        <div class="project-content">
+                          <img alt="Maternal health voice AI in Bambara" src="/assets/images/home-one/project/project-img1.jpg" loading="lazy" />
+                          <p>
+                            Fellows train speech recognition and verified medical translation models so expectant mothers and community health workers can ask questions and hear accurate guidance in Bambara.
+                          </p>
+                          <div class="baara-button">
+                            <a class="theme-btn gradient-btn" href="#contact">Fund This Lab Track<i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="baara-project-item style-one" data-aos="fade-up" data-aos-duration="1000">
+                      <div class="project-header" role="button" data-project-toggle="projectItem_1">
+                        <div class="project-title">
+                          <span>First Use Case 02 — Voice Farm Advice:</span>
+                          <h3 class="title">Spoken Bambara weather, soil &amp; market price advisory for rural farmers</h3>
+                        </div>
+                      </div>
+                      <div id="projectItem_1" class="accordion-collapse collapse show">
+                        <div class="project-content">
+                          <img alt="Voice farm advice in Bambara" src="/assets/images/home-one/project/project-img2.jpg" loading="lazy" />
+                          <p>
+                            Built on MALIBA-AI and Bayelemabaga (47,000 Bambara–French sentence pairs), delivering voice-first agricultural advice, rainfall alerts, and local market prices over low-bandwidth mobile links.
+                          </p>
+                          <div class="baara-button">
+                            <a class="theme-btn gradient-btn" href="#contact">Partner on Open Datasets<i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="baara-project-item style-one" data-aos="fade-up" data-aos-duration="1000">
+                      <div class="project-header" role="button" data-project-toggle="projectItem_2">
+                        <div class="project-title">
+                          <span>First Use Case 03 — Civic Access by Voice:</span>
+                          <h3 class="title">Government &amp; administrative forms read aloud in Bambara</h3>
+                        </div>
+                      </div>
+                      <div id="projectItem_2" class="accordion-collapse collapse">
+                        <div class="project-content">
+                          <img alt="Public forms read aloud in Bambara" src="/assets/images/home-one/project/project-img3.jpg" loading="lazy" />
+                          <p>
+                            Bridging the literacy divide by reading official French administrative forms aloud in natural Bambara and helping citizens complete essential public records accurately.
+                          </p>
+                          <div class="baara-button">
+                            <a class="theme-btn gradient-btn" href="#contact">Explore Fellowship<i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 7. ANIMATED MARQUEE SLIDE ==================== -->
+          <section class="animated-text-slide pb-120">
+            <div class="baara-scroll-text scroll-left">
+              <span class="scroll-text-inner"><span class="text">AI Institute of Mali</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">300 Learners / Year</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">Bambara NLP Lab</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">47,000 Sentence Pairs</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">50% Women Target</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">Solar-First Campus</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">Offline Server Caches</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">70% Hands-On Projects</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">4 Job-Ready Tracks</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">French &amp; Bambara Instruction</span><span class="icon"><i class="bi bi-star"></i></span></span>
+            </div>
+            <div class="baara-scroll-text scroll-left" aria-hidden="true">
+              <span class="scroll-text-inner"><span class="text">AI Institute of Mali</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">300 Learners / Year</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">Bambara NLP Lab</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">47,000 Sentence Pairs</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">50% Women Target</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">Solar-First Campus</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">Offline Server Caches</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">70% Hands-On Projects</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">4 Job-Ready Tracks</span><span class="icon"><i class="bi bi-star"></i></span></span>
+              <span class="scroll-text-inner"><span class="text">French &amp; Bambara Instruction</span><span class="icon"><i class="bi bi-star"></i></span></span>
+            </div>
+          </section>
+
+          <!-- ==================== 8. HOW WE OPERATE: BUILT FOR UNINTERRUPTED LEARNING ==================== -->
+          <section class="baara-choose_one" id="resilience">
+            <div class="baara-choose-wrapper p-r z-1 bg_cover" style="background-color: #010F34;">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                  <div class="col-xl-5">
+                    <div class="baara-image mb-5 mb-xl-0" data-aos="fade-up" data-aos-duration="1000">
+                      <img alt="Solar-powered offline-ready AI campus in Bamako" src="/assets/images/home-one/gallery/choose-img1.jpg" loading="lazy" />
+                      <div class="baara-rating-box">
+                        <div class="content">
+                          <h2>70%</h2>
+                          <p>Of class time is hands-on project work!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-7">
+                    <div class="baara-content-box">
+                      <div class="section-title text-white">
+                        <span class="sub-title" data-aos="fade-down" data-aos-duration="1400">HOW WE OPERATE • CAMPUS INFRASTRUCTURE</span>
+                        <h2 class="text-anm">Engineered for Bamako. Designed for Uninterrupted Learning.</h2>
+                      </div>
+                      <p data-aos="fade-up" data-aos-duration="1200">
+                        Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. Our Bamako campus is engineered from the ground up to keep classes, coding labs, and model training running smoothly every day.
+                      </p>
+                      <div class="experience-iconic-wrapper">
+                        <div class="experience-box" data-aos="fade-up" data-aos-duration="1400">
+                          <div class="content">
+                            <div class="number">
+                              <h2>300</h2>
+                              <span class="symbol"><img alt="plus symbol" src="/assets/images/home-one/gallery/plus.png" loading="lazy" /></span>
+                            </div>
+                            <h4>Learners / Year from 2028 (88 in 2027 Pilot)</h4>
+                          </div>
+                        </div>
+                        <div class="iconic-box-list">
+                          <div class="baara-iconic-left-box style-one mb-30" data-aos="fade-up" data-aos-duration="1600">
+                            <div class="icon"><img alt="Solar first icon" src="/assets/images/home-one/icon/icon5.png" loading="lazy" /></div>
+                            <div class="content">
+                              <h5>1. Solar-First Campus Power</h5>
+                              <p>Solar panels and battery banks serve as our primary campus power source, keeping classrooms, servers, and shared laptops running continuously.</p>
+                            </div>
+                          </div>
+                          <div class="baara-iconic-left-box style-one mb-30" data-aos="fade-up" data-aos-duration="1800">
+                            <div class="icon"><img alt="Offline server icon" src="/assets/images/home-one/icon/icon6.png" loading="lazy" /></div>
+                            <div class="content">
+                              <h5>2. Offline-Ready Local Servers &amp; Regional Sync</h5>
+                              <p>On-campus servers cache video courses, Python libraries, documentation, and compact AI models for instant local access, backed by regional cloud synchronization.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p data-aos="fade-up" data-aos-duration="2000">Taught in French with Bambara support • Every phase verified by transparent impact indicators</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 9. OPEN RESEARCH & ECOSYSTEM PILLARS ==================== -->
+          <section class="baara-client-sec pt-120 pb-60" id="coalition">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-9 text-center mb-45">
+                  <span class="sub-title">ECOSYSTEM &amp; COLLABORATION PILLARS</span>
+                  <h2 class="text-anm">Built With Malian Researchers, Universities, and Local Employers</h2>
+                  <p style="margin-top:10px;color:#555;">
+                    We collaborate across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="clients-slider">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="baara-client-item style-one">
+                      <div class="content">
+                        <h5 style="font-weight:700;margin-bottom:8px;color:#010F34;">Open Malian AI</h5>
+                        <p><span>MALIBA-AI &amp; Bayelemabaga</span> · Building on 47,000 open Bambara–French sentence pairs and community speech benchmarks</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="baara-client-item style-one">
+                      <div class="content">
+                        <h5 style="font-weight:700;margin-bottom:8px;color:#010F34;">Academic Links</h5>
+                        <p><span>Universities &amp; Faculty</span> · Curriculum mentorship, research ethics review, and joint student capstone supervision</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="baara-client-item style-one">
+                      <div class="content">
+                        <h5 style="font-weight:700;margin-bottom:8px;color:#010F34;">African NLP Network</h5>
+                        <p><span>West African Research</span> · Open-source datasets, speech recognition benchmarks, and public-license model releases</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="baara-client-item style-one">
+                      <div class="content">
+                        <h5 style="font-weight:700;margin-bottom:8px;color:#010F34;">Campus Infrastructure</h5>
+                        <p><span>Compute &amp; Hardware</span> · Shared laptops, offline local servers, solar power arrays, and GPU training credits</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="baara-client-item style-one">
+                      <div class="content">
+                        <h5 style="font-weight:700;margin-bottom:8px;color:#010F34;">Bamako Employers</h5>
+                        <p><span>Hiring &amp; Studio Partners</span> · Agro-industry, clinics, NGOs, and businesses hosting internships and hiring graduates</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 10. 24-MONTH ROADMAP & 4 MILESTONE GATES ====================
+               Rendered from web/sections.js (multilingual data model) · styled in web/sections.css -->
+          <section class="baara-process_one p-r z-1 pt-55 pb-120" id="process" aria-labelledby="process-heading">
+            <div class="process-shape" id="processRobotHand">
+              <img alt="process shape" src="/assets/images/home-one/gallery/process-shape.png" loading="lazy" />
+            </div>
+            <div class="container" id="processMount"></div>
+          </section>
+
+          <!-- ==================== 11. PARTNER ACCOUNTABILITY & COMMUNITY VOICES ==================== -->
+          <section class="baara-testimonial_one pt-115 pb-120 p-r z-1" id="testimonials">
+            <div class="testimonial-shape bg_cover" style="background-image: url('/assets/images/home-one/testimonial/testimonial-shape.png');"></div>
+            <div class="testimonial-image" data-aos="fade-left" data-aos-duration="1000">
+              <img alt="Futuristic female humanoid AI robot with dark skin and Malian gold cybernetic accents" src="/assets/images/home-one/testimonial/testimonial-robot.svg" loading="lazy" />
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-xxl-7 col-xl-8 col-lg-10">
+                  <div class="section-title mb-55">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">Impact &amp; Open Access</span>
+                    <h2 class="text-anm">Quarterly Reporting on 6 Clear Indicators &amp; Open Public Releases</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-11">
+                  <div class="testimonial-slider" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="row g-4" id="testimonialViewport">
+                      <div class="col-lg-6 testimonial-card-slide" data-slide="0">
+                        <div class="baara-testimonial-item style-one">
+                          <div class="testimonial-content">
+                            <div class="ratings">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                              Every partner receives a concise quarterly report on six indicators: (1) Enrolment, (2) Completion, (3) Share of women learners, (4) Graduates in paid work, (5) Open datasets released, and (6) Applied AI studio projects delivered.
+                            </p>
+                            <div class="author-info-quote-wrap">
+                              <div class="author-thumb-item">
+                                <div class="author-thumb">
+                                  <img alt="Malian woman AI scholar portrait" src="/assets/images/home-one/testimonial/author-img1.svg" loading="lazy" />
+                                </div>
+                                <div class="author-info">
+                                  <h5>Quarterly Impact Commitment</h5>
+                                  <span class="position">6 Verified Impact Indicators • Transparent Governance</span>
+                                </div>
+                              </div>
+                              <div class="quote"><img alt="" src="/assets/images/home-one/testimonial/quote.png" loading="lazy" /></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 testimonial-card-slide" data-slide="1">
+                        <div class="baara-testimonial-item style-one">
+                          <div class="testimonial-content">
+                            <div class="ratings">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                              Building on MALIBA-AI and the Bayelemabaga dataset of 47,000 Bambara–French sentence pairs, every dataset and speech model trained in our Bambara NLP Lab is released under open public licenses with credit to each Malian contributor.
+                            </p>
+                            <div class="author-info-quote-wrap">
+                              <div class="author-thumb-item">
+                                <div class="author-thumb">
+                                  <img alt="Malian woman Bambara NLP researcher portrait" src="/assets/images/home-one/testimonial/author-img2.svg" loading="lazy" />
+                                </div>
+                                <div class="author-info">
+                                  <h5>Bambara NLP Open-Access Charter</h5>
+                                  <span class="position">Public Licenses &amp; Contributor Attribution in Mali</span>
+                                </div>
+                              </div>
+                              <div class="quote"><img alt="" src="/assets/images/home-one/testimonial/quote.png" loading="lazy" /></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="custom-nav">
+                    <button class="custom-prev" id="testimPrevBtn" aria-label="Previous accountability card"><i class="bi bi-arrow-left"></i></button>
+                    <button class="custom-next" id="testimNextBtn" aria-label="Next accountability card"><i class="bi bi-arrow-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 12. FOUR WAYS TO TAKE PART (01-04) ==================== -->
+          <section class="baara-advance-sec pt-115 pb-80">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="section-title text-center mb-55">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">Four Ways to Take Part</span>
+                    <h2 class="text-anm">Help Us Open the First Cohort in 2027.</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="baara-iconic-box style-one mb-40">
+                    <div class="box-border"></div>
+                    <div class="icon-wrap">
+                      <div class="number">01</div>
+                      <div class="icon"><img alt="Sponsor a learner icon" src="/assets/images/home-one/icon/icon7.png" loading="lazy" /></div>
+                    </div>
+                    <div class="content">
+                      <h4 class="title">Sponsor a Learner ($1,500)</h4>
+                      <p>A named scholarship gives one young Malian the full path from first laptop lesson to first paid work.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="baara-iconic-box style-one mb-40">
+                    <div class="box-border"></div>
+                    <div class="icon-wrap">
+                      <div class="number">02</div>
+                      <div class="icon"><img alt="Fund the Bambara lab icon" src="/assets/images/home-one/icon/icon8.png" loading="lazy" /></div>
+                    </div>
+                    <div class="content">
+                      <h4 class="title">Support the Bambara Lab</h4>
+                      <p>Support fellowships, data collection, and open AI models in Malian languages, released for everyone to use.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="baara-iconic-box style-one mb-40">
+                    <div class="box-border"></div>
+                    <div class="icon-wrap">
+                      <div class="number">03</div>
+                      <div class="icon"><img alt="Give technology icon" src="/assets/images/home-one/icon/icon7.png" loading="lazy" /></div>
+                    </div>
+                    <div class="content">
+                      <h4 class="title">Give Technology (In-Kind)</h4>
+                      <p>Cloud credits, laptops, GPU time, software, and course content keep learning running on and offline.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="baara-iconic-box style-one mb-40">
+                    <div class="box-border"></div>
+                    <div class="icon-wrap">
+                      <div class="number">04</div>
+                      <div class="icon"><img alt="Hire and partner icon" src="/assets/images/home-one/icon/icon7.png" loading="lazy" /></div>
+                    </div>
+                    <div class="content">
+                      <h4 class="title">Hire &amp; Partner (Employers)</h4>
+                      <p>Bring client projects to our applied AI studio, offer internships, and hire our job-ready graduates.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 13. WAYS TO PARTNER & SPONSOR ==================== -->
+          <section class="baara-pricing_one bg_cover pt-115 pb-90" id="pricing" style="background-image: url('/assets/images/home-one/bg/pricing-bg.jpg');">
+            <div class="container">
+              <div class="row align-items-end">
+                <div class="col-xl-7 col-lg-8">
+                  <div class="section-title mb-55">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">Scholarships, Lab Fellowships &amp; Employer Partnerships</span>
+                    <h2 class="text-anm">Sponsor a Scholar, Support the Bambara NLP Lab, or Partner on Applied AI.</h2>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-4">
+                  <div class="baara-button mb-60 text-lg-end" data-aos="fade-up" data-aos-duration="1000">
+                    <a class="theme-btn gradient-btn" href="#contact">Connect With Our Team <i class="bi bi-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="baara-pricing-item style-one mb-30" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="pricing-inner-wrapper">
+                      <div class="pricing-header">
+                        <span class="plan">Named Learner Scholarship</span>
+                        <h2 class="price">$1,500</h2>
+                        <p>Full path from first laptop lesson to paid work</p>
+                      </div>
+                      <div class="pricing-body">
+                        <ul class="check-list style-two">
+                          <li>1 Named Malian Scholar (50% Women Target)</li>
+                          <li>Covers Tuition Across Foundational &amp; Applied Tracks</li>
+                          <li>Includes Learner Stipend &amp; Bamako Transport</li>
+                          <li>Shared Solar-Backed Laptop &amp; Offline Server Access</li>
+                          <li>Mentor Code Reviews &amp; Employer Job Placement</li>
+                          <li>Quarterly 6-Indicator Impact Report to Sponsor</li>
+                        </ul>
+                      </div>
+                      <div class="pricing-button">
+                        <a class="theme-btn gradient-btn" href="#contact"><span>Sponsor a Learner<i class="bi bi-arrow-right"></i></span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="baara-pricing-item style-one item-active mb-30" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="pricing-inner-wrapper bg_cover" style="background-image: url('/assets/images/home-one/bg/pricing-bg2.jpg');">
+                      <div class="rib-badge">Open Research &amp; Tech</div>
+                      <div class="pricing-header">
+                        <span class="plan">Bambara NLP Lab &amp; Campus Partner</span>
+                        <h2 class="price">Lab &amp; Tech</h2>
+                        <p>Fellowships, open datasets &amp; resilient campus equipment</p>
+                      </div>
+                      <div class="pricing-body">
+                        <ul class="check-list style-two">
+                          <li>Sponsor 24-Week Bambara NLP Lab Research Fellows</li>
+                          <li>Support Community Speech &amp; Translation Data Collection</li>
+                          <li>Contribute Laptops, Local Offline Servers, or GPU Credits</li>
+                          <li>Support Solar-First Classroom Power &amp; Connectivity</li>
+                          <li>100% Open-Source Releases With Contributor Attribution</li>
+                          <li>Quarterly Impact &amp; Open-Access Benchmark Reports</li>
+                        </ul>
+                      </div>
+                      <div class="pricing-button">
+                        <a class="theme-btn gradient-btn" href="#contact"><span>Partner With the Lab<i class="bi bi-arrow-right"></i></span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="baara-pricing-item style-one mb-30" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="pricing-inner-wrapper">
+                      <div class="pricing-header">
+                        <span class="plan">Employer &amp; Applied AI Studio</span>
+                        <h2 class="price">Hire &amp; Build</h2>
+                        <p>Internships, graduate hiring &amp; custom French/Bambara AI</p>
+                      </div>
+                      <div class="pricing-body">
+                        <ul class="check-list style-two">
+                          <li>Hire Track 1–4 Graduates for Data, AI &amp; ML Roles</li>
+                          <li>Host Supervised Learner Internships in Bamako</li>
+                          <li>Commission Applied AI Studio Projects for Your Organization</li>
+                          <li>Custom French &amp; Bambara Voice/Text Workflow Prototypes</li>
+                          <li>Co-Design Real-World Capstone Datasets With Faculty</li>
+                          <li>Direct Access to Annual Cohort Demo Days</li>
+                        </ul>
+                      </div>
+                      <div class="pricing-button">
+                        <a class="theme-btn gradient-btn" href="#contact"><span>Partner as an Employer<i class="bi bi-arrow-right"></i></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 14. FOUNDING TEAM & ADVISORS TABS ==================== -->
+          <section class="baara-team_one pt-115 pb-105 p-r z-1" id="team">
+            <div class="shape">
+              <img alt="decorative shape" src="/assets/images/home-one/team/team-shape.png" loading="lazy" />
+            </div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <div class="section-title text-center mb-50">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">The Founding Team &amp; Advisors</span>
+                    <h2 class="text-anm">Malian Leadership Building Bamako's Job-First AI Institute.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xl-4 col-lg-12">
+                  <ul class="nav nav-tabs" data-aos="fade-up" data-aos-duration="1000">
+                    <li>
+                      <div class="team-thumb-item mb-30 active" data-team-tab="0" style="cursor: pointer;">
+                        <div class="thumb"><img alt="Abdel R Traoré" src="/assets/images/home-one/team/abdel-traore.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;" loading="lazy" /></div>
+                        <div class="content">
+                          <h5>Abdel R Traoré</h5>
+                          <span class="position">Co-founder, Senior Systems Engineer</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="team-thumb-item mb-30" data-team-tab="1" style="cursor: pointer;">
+                        <div class="thumb"><img alt="Samba Gueye" src="/assets/images/home-one/team/samba-gueye.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;" loading="lazy" /></div>
+                        <div class="content">
+                          <h5>Samba Gueye</h5>
+                          <span class="position">Co-founder, MBA, Senior Manager</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="team-thumb-item mb-30" data-team-tab="2" style="cursor: pointer;">
+                        <div class="thumb"><img alt="Cheick Kanté" src="/assets/images/home-one/team/cheick-kante.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;" loading="lazy" /></div>
+                        <div class="content">
+                          <h5>Cheick Kanté</h5>
+                          <span class="position">Co-Founder, Health Care Program Director</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="team-thumb-item mb-30" data-team-tab="3" style="cursor: pointer;">
+                        <div class="thumb"><img alt="Sira Koné" src="/assets/images/home-one/team/sira-kone.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;" loading="lazy" /></div>
+                        <div class="content">
+                          <h5>Sira Koné</h5>
+                          <span class="position">Program Advisor in Mali</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xl-8 col-lg-12">
+                  <div class="tab-content" id="teamTabContent">
+                    <!-- Tab 0: Abdel R Traoré -->
+                    <div class="tab-pane fade show active" data-team-pane="0">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <div class="member-image" data-aos="fade-up" data-aos-duration="1000">
+                            <img alt="Abdel R Traoré — Co-founder, Senior Systems Engineer" src="/assets/images/home-one/team/abdel-traore.jpg" style="width:100%;height:auto;max-height:520px;object-fit:cover;object-position:center top;border-radius:28px;box-shadow:0 16px 36px rgba(0,0,0,0.3);" loading="lazy" />
+                          </div>
+                        </div>
+                        <div class="col-lg-7">
+                          <div class="member-info" data-aos="fade-up" data-aos-duration="1000">
+                            <h3 class="title">Abdel R Traoré</h3>
+                            <span class="position">Co-founder, Senior Systems Engineer</span>
+                            <p>
+                              Leads institutional strategy, milestone governance, campus infrastructure engineering, and international partnerships for BAARA — the AI Institute of Mali — connecting global technology and scholarship partners with Malian youth and employers.
+                            </p>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Systems Engineering &amp; Resilient Infrastructure <span>96%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 96%;"></div></div>
+                            </div>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Institutional Strategy &amp; Partner Governance <span>94%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 94%;"></div></div>
+                            </div>
+                            <div class="team-experience-social-box mt-40">
+                              <div class="experience-box"><h3>2027 <span>First Cohort Launch</span></h3></div>
+                              <div class="social-box">
+                                <a href="#contact" aria-label="Contact via email"><i class="bi bi-envelope"></i></a>
+                                <a href="#team" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="#team" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Tab 1: Samba Gueye -->
+                    <div class="tab-pane fade" data-team-pane="1">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <div class="member-image" data-aos="fade-up" data-aos-duration="1000">
+                            <img alt="Samba Gueye — Co-founder, MBA, Senior Manager" src="/assets/images/home-one/team/samba-gueye.jpg" style="width:100%;height:auto;max-height:520px;object-fit:cover;object-position:center top;border-radius:28px;box-shadow:0 16px 36px rgba(0,0,0,0.3);" loading="lazy" />
+                          </div>
+                        </div>
+                        <div class="col-lg-7">
+                          <div class="member-info" data-aos="fade-up" data-aos-duration="1000">
+                            <h3 class="title">Samba Gueye</h3>
+                            <span class="position">Co-founder, MBA, Senior Manager</span>
+                            <p>
+                              Architects the four job-first learning tracks (from Digital Foundations to Python/ML and the 24-week Bambara NLP Lab) and designs the offline-first campus server caches so learners code and train models without interruption.
+                            </p>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Applied AI, Python/ML &amp; Curriculum Design <span>95%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Offline Server &amp; Local LLM/ASR Deployment <span>92%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="team-experience-social-box mt-40">
+                              <div class="experience-box"><h3>4 Tracks <span>70% Hands-On Projects</span></h3></div>
+                              <div class="social-box">
+                                <a href="#contact" aria-label="Contact via email"><i class="bi bi-envelope"></i></a>
+                                <a href="#team" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Tab 2: Cheick Kanté -->
+                    <div class="tab-pane fade" data-team-pane="2">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <div class="member-image" data-aos="fade-up" data-aos-duration="1000">
+                            <img alt="Cheick Kanté — Co-Founder, Health Care Program Director" src="/assets/images/home-one/team/cheick-kante.jpg" style="width:100%;height:auto;max-height:520px;object-fit:cover;object-position:center top;border-radius:28px;box-shadow:0 16px 36px rgba(0,0,0,0.3);" loading="lazy" />
+                          </div>
+                        </div>
+                        <div class="col-lg-7">
+                          <div class="member-info" data-aos="fade-up" data-aos-duration="1000">
+                            <h3 class="title">Cheick Kanté</h3>
+                            <span class="position">Co-Founder, Health Care Program Director</span>
+                            <p>
+                              Directs healthcare AI programs and clinical partnerships in Mali — spearheading maternal health voice AI, local medical dataset curation, and hospital/clinic collaborations across Bamako and regional health centers.
+                            </p>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Healthcare AI Programs &amp; Clinical Pilots <span>95%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Medical Dataset Alliances &amp; Hospital Partnerships <span>93%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 93%;"></div></div>
+                            </div>
+                            <div class="team-experience-social-box mt-40">
+                              <div class="experience-box"><h3>Clinical AI <span>Health Care Program Direction</span></h3></div>
+                              <div class="social-box">
+                                <a href="#contact" aria-label="Contact via email"><i class="bi bi-envelope"></i></a>
+                                <a href="#team" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Tab 3: Sira Koné -->
+                    <div class="tab-pane fade" data-team-pane="3">
+                      <div class="row">
+                        <div class="col-lg-5">
+                          <div class="member-image" data-aos="fade-up" data-aos-duration="1000">
+                            <img alt="Sira Koné — Program Advisor in Mali" src="/assets/images/home-one/team/sira-kone.jpg" style="width:100%;height:auto;max-height:520px;object-fit:cover;object-position:center top;border-radius:28px;box-shadow:0 16px 36px rgba(0,0,0,0.3);" loading="lazy" />
+                          </div>
+                        </div>
+                        <div class="col-lg-7">
+                          <div class="member-info" data-aos="fade-up" data-aos-duration="1000">
+                            <h3 class="title">Sira Koné</h3>
+                            <span class="position">Program Advisor in Mali</span>
+                            <p>
+                              Leads relationships with Malian employers, NGOs, universities, and community organizations in Bamako — ensuring 50% women learner participation and connecting graduates directly to internships, studio contracts, and paid jobs.
+                            </p>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Employer Placement &amp; Mali Ecosystem Alliances <span>94%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 94%;"></div></div>
+                            </div>
+                            <div class="baara-progress-item mb-20">
+                              <div class="progress-title"><h6>Youth &amp; Women Outreach (50% Target) <span>92%</span></h6></div>
+                              <div class="progress"><div class="progress-bar" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="team-experience-social-box mt-40">
+                              <div class="experience-box"><h3>50% <span>Women Learners Target</span></h3></div>
+                              <div class="social-box">
+                                <a href="#contact" aria-label="Contact via email"><i class="bi bi-envelope"></i></a>
+                                <a href="#team" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 15. CONTACT & PARTNERSHIP INQUIRY SECTION ==================== -->
+          <section class="baara-contact_one bg_cover pt-120 pb-120" id="contact" style="background-image: url('/assets/images/home-one/bg/contact-bg.jpg');">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8">
+                  <div class="baara-contact-wrapper mb-5 mb-xl-0" data-aos="fade-up" data-aos-duration="1000">
+                    <h3>Take Part in the 2027 Cohort</h3>
+                    <p>Whether you want to sponsor a learner ($1,500), support the Bambara NLP Lab, contribute hardware/cloud credits, hire graduates, or apply as a learner, send an inquiry below.</p>
+                    <form class="baara-contact-form" id="baaraContactForm">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input class="form_control" placeholder="Your Full Name" required type="text" name="name" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input class="form_control" placeholder="Email Address" required type="email" name="email" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input class="form_control" placeholder="Organization / University (Optional)" type="text" name="company_name" />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group">
+                            <input class="form_control" placeholder="Phone / WhatsApp (+223 / Intl)" type="text" name="phone" />
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <select class="form_control" name="Subject" required style="background:#0a193b;color:#fff;border:1px solid rgba(255,255,255,0.2);">
+                              <option value="Sponsor a Learner ($1,500 Scholarship)">01 — Sponsor a Learner ($1,500 Named Scholarship)</option>
+                              <option value="Support the Bambara NLP Lab">02 — Support the Bambara NLP Lab &amp; Fellowships</option>
+                              <option value="Give Technology (In-Kind Laptops / Cloud / GPU)">03 — Give Technology (In-Kind Laptops / Cloud / GPU)</option>
+                              <option value="Hire Graduates &amp; Applied AI Studio Partner">04 — Hire Graduates &amp; Applied AI Studio Partner</option>
+                              <option value="Prospective Learner / Bamako 2027 Cohort">05 — Prospective Learner / Bamako 2027 Cohort Inquiry</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <textarea class="form_control" placeholder="Tell us how you would like to partner, sponsor, or learn with baara.ai..." rows="3" name="message"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-group">
+                            <button type="submit" class="theme-btn gradient-btn">Send Inquiry<i class="bi bi-arrow-right"></i></button>
+                          </div>
+                          <p id="contactFeedback" style="color:#2ECC71;font-weight:600;margin-top:10px;display:none;"></p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-8">
+                  <div class="baara-content-box">
+                    <div class="section-title text-white">
+                      <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">BAARA — AI Institute of Mali</span>
+                      <h2 class="text-anm">Malian Youth, Building AI in Their Own Languages.</h2>
+                    </div>
+                    <p data-aos="fade-up" data-aos-duration="1200">
+                      Every phase of our work is guided by a quarterly 6-indicator report covering enrolment, completion, share of women learners, graduates in paid work, open Bambara datasets released, and applied studio projects delivered.
+                    </p>
+                    <div class="baara-button-wrapper" data-aos="fade-up" data-aos-duration="1400">
+                      <a class="theme-btn gradient-btn" href="#pitch">Explore Our Model<i class="bi bi-arrow-right"></i></a>
+                      <a class="theme-btn style-two" href="#services">View 4 Learning Tracks<i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="baara-contact-info-list">
+                      <div class="baara-info-box style-one" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                        <div class="content">
+                          <span>Campus Location</span>
+                          <h4><a href="#resilience">Bamako, Mali</a></h4>
+                        </div>
+                      </div>
+                      <div class="baara-info-box style-one" data-aos="fade-up" data-aos-duration="1600">
+                        <div class="icon"><i class="bi bi-envelope"></i></div>
+                        <div class="content">
+                          <span>Founding Team &amp; Partnerships</span>
+                          <h4><a href="mailto:contact@baara.ai">contact@baara.ai</a></h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ==================== 16. EMERGING AI AFRICA — FOUNDING ISSUE & BRIEFS ==================== -->
+          <section class="baara-blog_one pt-115 pb-70" id="blog">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-8 col-lg-10">
+                  <div class="section-title text-center mb-55">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">Emerging AI Africa • Founding Issue</span>
+                    <h2 class="text-anm">Institutional Briefs &amp; Bambara NLP Lab Publications.</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="baara-blog-post-item style-one mb-40" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="post-thumbnail"><img alt="Institutional Overview 2027-2028" src="/assets/images/home-one/blog/blog-img1.jpg" loading="lazy" /></div>
+                    <div class="post-content">
+                      <div class="post-meta">
+                        <span><i class="bi bi-person-fill"></i>By<a href="#team">Founding Team</a></span>
+                        <span><i class="bi bi-file-earmark-text"></i><a href="#pitch">School Model (2027–2028)</a></span>
+                      </div>
+                      <h4 class="title"><a href="#pitch">From Zero Digital Skills to Paid AI Work: Inside Our 4-Track Job-First Model in Bamako.</a></h4>
+                      <a class="read-more style-one" href="#pitch">Explore Our Model<i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="baara-blog-post-item style-one mb-40" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="post-thumbnail"><img alt="Bambara NLP Lab Brief" src="/assets/images/home-one/blog/blog-img2.jpg" loading="lazy" /></div>
+                    <div class="post-content">
+                      <div class="post-meta">
+                        <span><i class="bi bi-person-fill"></i>By<a href="#projects">Bambara NLP Lab</a></span>
+                        <span><i class="bi bi-translate"></i><a href="#projects">47,000 Sentence Pairs</a></span>
+                      </div>
+                      <h4 class="title"><a href="#projects">Building on MALIBA-AI &amp; Bayelemabaga: Open Bambara Voice AI for Health &amp; Farming.</a></h4>
+                      <a class="read-more style-one" href="#projects">Explore Lab Cases<i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                  <div class="baara-blog-post-item style-one mb-40" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="post-thumbnail"><img alt="Resilience Engineering in Bamako" src="/assets/images/home-one/blog/blog-img3.jpg" loading="lazy" /></div>
+                    <div class="post-content">
+                      <div class="post-meta">
+                        <span><i class="bi bi-person-fill"></i>By<a href="#resilience">Systems Architecture</a></span>
+                        <span><i class="bi bi-lightning-charge-fill"></i><a href="#resilience">Solar &amp; Offline-First</a></span>
+                      </div>
+                      <h4 class="title"><a href="#resilience">Engineered for Bamako: How Solar-First Power and Local Server Caches Keep Class Running.</a></h4>
+                      <a class="read-more style-one" href="#resilience">See Campus Architecture<i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ==================== 17. FOOTER ==================== -->
+        <footer class="main-footer bg_cover" style="background-image: url('/assets/images/footer/footer-bg.jpg');">
+          <div class="shape">
+            <img alt="decorative footer shape" src="/assets/images/footer/footer-shape1.png" loading="lazy" />
+          </div>
+          <div class="container">
+            <div class="footer-newsletter-wrapper pb-120">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-xl-7 col-lg-10">
+                  <div class="baara-content-box text-center text-xl-start mb-5 mb-xl-0">
+                    <div class="section-title text-white">
+                      <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">Help Us Open Cohort 1 in 2027</span>
+                      <h2 class="text-anm">Receive Quarterly Impact Reports &amp; Open Bambara Lab Releases!</h2>
+                    </div>
+                    <div class="baara-avatar-box" data-aos="fade-up" data-aos-duration="1200">
+                      <div class="avatar-list">
+                        <ul>
+                          <li><img alt="Young Malian female learner" src="/assets/images/footer/avatar-img1.svg" style="width:52px;height:52px;object-fit:cover;border-radius:50%;" loading="lazy" /></li>
+                          <li><img alt="Young Malian male learner" src="/assets/images/footer/avatar-img2.svg" style="width:52px;height:52px;object-fit:cover;border-radius:50%;" loading="lazy" /></li>
+                          <li><img alt="Young Malian female learner" src="/assets/images/footer/avatar-img3.svg" style="width:52px;height:52px;object-fit:cover;border-radius:50%;" loading="lazy" /></li>
+                          <li><img alt="Young Malian male learner" src="/assets/images/footer/avatar-img4.svg" style="width:52px;height:52px;object-fit:cover;border-radius:50%;" loading="lazy" /></li>
+                          <li><img alt="Young Malian female learner" src="/assets/images/footer/avatar-img5.svg" style="width:52px;height:52px;object-fit:cover;border-radius:50%;" loading="lazy" /></li>
+                        </ul>
+                        <h6>88 Pilot Learners (2027) → 300 Learners / Year (2028)</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-5 col-lg-10">
+                  <div class="baara-newsletter-box" data-aos="fade-up" data-aos-duration="1200">
+                    <form autocomplete="off" id="newsletterForm">
+                      <div class="form-group">
+                        <input class="form_control" placeholder="Email Address for Quarterly Updates" required type="email" name="email" />
+                        <button type="submit" class="theme-btn gradient-btn">JOIN UPDATES <i class="bi bi-bell"></i></button>
+                      </div>
+                      <div class="form-check mt-20">
+                        <label class="form-check-label" for="radio1">
+                          <input class="form-check-input" id="radio1" type="radio" name="radio" checked />
+                          I agree to receive quarterly baara.ai school and open dataset updates.
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-wrapper bg_cover" style="background-image: url('/assets/images/footer/footer-widget-bg.jpg');">
+            <div class="container">
+              <div class="footer-widget-area pt-100 pb-55">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 order-1">
+                    <div class="footer-widget footer-about-widget mb-40" data-aos="fade-up" data-aos-duration="800">
+                      <div class="widget-content">
+                        <div class="footer-logo mb-30">
+                          <a href="#hero">
+                            <img
+                              alt="BAARA Cloud Solutions — AI Institute of Mali"
+                              src="/assets/images/home-one/logo/baara-logo-cropped.png"
+                              width="135"
+                              height="105"
+                              loading="lazy"
+                              style="height:100px;width:auto;background:#ffffff;padding:8px 16px;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,0.35);object-fit:contain;"
+                            />
+                          </a>
+                        </div>
+                        <p>
+                          BAARA — AI Institute of Mali (baara.ai) is a job-first AI school and open Bambara NLP Lab in Bamako, engineered with solar-first power and offline-ready local campus servers.
+                        </p>
+                        <div class="social-box">
+                          <a href="#contact" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                          <a href="#hero" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+                          <a href="#hero" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                          <a href="#hero" aria-label="GitHub / Open Models"><i class="bi bi-github"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-5 col-md-12 order-3 order-lg-2">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="footer-widget footer-nav-widget mb-40" data-aos="fade-up" data-aos-duration="1000">
+                          <div class="widget-content">
+                            <h4 class="widget-title">School Navigation</h4>
+                            <div class="line-wrap"><span></span><span></span><span></span></div>
+                            <ul class="widget-nav">
+                              <li><a href="#hero">Mission &amp; Overview</a></li>
+                              <li><a href="#about">Why Now: Mali in Focus</a></li>
+                              <li><a href="#pitch">Our Model &amp; Impact</a></li>
+                              <li><a href="#resilience">Solar &amp; Offline Campus</a></li>
+                              <li><a href="#process">2027–2028 Cohort Roadmap</a></li>
+                              <li><a href="#team">Founding Team &amp; Advisors</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="footer-widget footer-nav-widget mb-40" data-aos="fade-up" data-aos-duration="1200">
+                          <div class="widget-content">
+                            <h4 class="widget-title">The 4 Learning Tracks</h4>
+                            <div class="line-wrap"><span></span><span></span><span></span></div>
+                            <ul class="widget-nav">
+                              <li><a href="#services">Track 1: Digital &amp; Data (8 wks)</a></li>
+                              <li><a href="#services">Track 2: Applied AI for Work (6 wks)</a></li>
+                              <li><a href="#services">Track 3: Python &amp; ML (16 wks)</a></li>
+                              <li><a href="#projects">Track 4: Bambara NLP Lab (24 wks)</a></li>
+                              <li><a href="#pricing">Sponsor a Scholar ($1,500)</a></li>
+                              <li><a href="#pricing">Ways to Partner &amp; Sponsor</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 order-2 order-lg-3">
+                    <div class="footer-widget footer-contact-info-widget mb-40" data-aos="fade-up" data-aos-duration="1400">
+                      <div class="widget-content">
+                        <h4 class="widget-title">Bamako Campus</h4>
+                        <div class="line-wrap"><span></span><span></span><span></span></div>
+                        <div class="baara-info-box style-two mb-20">
+                          <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                          <div class="info"><p>Bamako, Mali</p></div>
+                        </div>
+                        <div class="baara-info-box style-two mb-20">
+                          <div class="icon"><i class="bi bi-envelope"></i></div>
+                          <div class="info"><p><a href="mailto:contact@baara.ai">contact@baara.ai</a></p></div>
+                        </div>
+                        <div class="baara-info-box style-two mb-20">
+                          <div class="icon"><i class="bi bi-shield-check"></i></div>
+                          <div class="info"><p>6 Quarterly Impact Indicators • 100% Open Bambara Releases</p></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="copyright-area">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <div class="copyright-text text-lg-start text-center">
+                      <p>© 2026 <span>BAARA — AI Institute of Mali (baara.ai)</span>. All rights reserved.</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="copyright-link text-lg-end text-center">
+                      <a href="#pitch">Our Model</a>
+                      <a href="#contact">Privacy &amp; Governance</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ==================== BAMAKO 60s CAMPUS PREVIEW VIDEO MODAL ==================== -->
+    <div class="baara-video-modal" id="baaraVideoModal">
+      <div class="baara-modal-card">
+        <div class="baara-modal-top">
+          <div>
+            <strong>BAARA — AI Institute of Mali • 60s Campus &amp; Bambara Lab Preview</strong>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button type="button" class="baara-close-btn" id="closeVideoModalBtn" aria-label="Close video preview">✕</button>
+          </div>
+        </div>
+        <div style="position:relative;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;">
+          <video
+            id="baaraVideo"
+            poster="/build_baara_media/dist/poster-sahel-hero.webp"
+            playsinline
+            controls
+            preload="metadata"
+            style="width:100%;height:100%;object-fit:cover;"
+          ></video>
+          <div id="webpFallbackContainer" style="display:none;position:absolute;inset:0;background:#010F34;">
+            <img id="webpFallbackImg" src="/build_baara_media/dist/storyboard-loop.webp" alt="Campus Preview Fallback" style="width:100%;height:100%;object-fit:cover;" />
+            <audio id="liteAudioPlayer" src="/build_baara_media/dist/audio-only-lite.m4a" controls style="position:absolute;bottom:14px;left:14px;right:14px;width:calc(100% - 28px);"></audio>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;justify-content:space-between;font-size:13px;color:#B8C2DC;">
+          <span id="activeCutIndicator">● Campus Preview: French &amp; Bambara Instruction</span>
+          <span>Bamako, Mali • First Cohort 2027</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Quick Language Dock: Always accessible across all devices & scroll positions -->
+    <aside class="baara-floating-lang-dock" aria-label="Language selector dock">
+      <span class="baara-floating-label">🌐</span>
+      <div class="baara-lang-switch" role="group" aria-label="Floating language selector">
+        <button class="baara-lang-btn active" data-set-lang="en">EN</button>
+        <button class="baara-lang-btn" data-set-lang="fr">FR</button>
+        <button class="baara-lang-btn" data-set-lang="bm">BM</button>
+      </div>
+    </aside>
+
+    <script src="/web/i18n.js"></script>
+    <script src="/web/app.js"></script>
+    <script src="/web/sections.js"></script>
+    <script src="/web/robot-interactive.js"></script>
+    <script type="module" src="/web/spline-island/island.js"></script>
+  </body>
+</html>
