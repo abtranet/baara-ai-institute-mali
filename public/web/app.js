@@ -408,6 +408,7 @@
   const videoEl = document.getElementById("baaraVideo");
   const webpContainer = document.getElementById("webpFallbackContainer");
   const liteAudio = document.getElementById("liteAudioPlayer");
+  const cutIndicator = document.getElementById("activeCutIndicator");
 
   function loadCampusPreviewStream() {
     if (!videoEl) return;
@@ -421,6 +422,57 @@
     } else {
       videoEl.src = "/build_baara_media/intermediate/mezzanine_muxed_1080p24.mp4";
     }
+  }
+
+  if (videoEl && cutIndicator) {
+    videoEl.addEventListener("timeupdate", () => {
+      const t = videoEl.currentTime;
+      const lang = document.documentElement.lang || "en";
+      let label = "● Campus Preview: French & Bambara Instruction";
+
+      if (t < 4.0) {
+        label = lang === "fr" ? "● Studio : Présentation de l'Institut d'IA du Mali" :
+                lang === "bm" ? "● Kalanso Filɛ : Mali IA Kalanso Lakodɔnni" :
+                "● Studio: Introducing the AI Institute of Mali";
+      } else if (t < 9.5) {
+        label = lang === "fr" ? "● Campus ACI 2000 : Infrastructures de Calcul & Salles de Cours" :
+                lang === "bm" ? "● ACI 2000 Kalanso : Jatebɔ Minanw & Kalan Yɔrɔw" :
+                "● ACI 2000 Campus: Compute Infrastructure & Learning Studios";
+      } else if (t < 11.5) {
+        label = lang === "fr" ? "● Studio : Modèles Bamanankan & Souveraineté Numérique" :
+                lang === "bm" ? "● Bamanankan Hakilitigiya : An Yɛrɛ ka Dɔnniya" :
+                "● Studio: Bambara AI Models & Digital Sovereignty";
+      } else if (t < 19.0) {
+        label = lang === "fr" ? "● Labo NLP Bambara : Entraînement de Modèles Vocaux Souverains" :
+                lang === "bm" ? "● Bamanankan Labo : Kan Kuma Modelw Dilanli" :
+                "● Bambara NLP Lab: Training Sovereign Speech Models";
+      } else if (t < 21.5) {
+        label = lang === "fr" ? "● Studio : IA Appliquée aux Besoins Réels de l'Afrique" :
+                lang === "bm" ? "● Studio : Hakilitigiya Baara Sɛbɛw Kama" :
+                "● Studio: Practical AI Built for Real Sahel Workflows";
+      } else if (t < 29.5) {
+        label = lang === "fr" ? "● Terrain Sotuba : Logistique, Agro-Industrie & Traitement Local" :
+                lang === "bm" ? "● Sotuba Baara : Feereli, Sene-kow & Foroba Jatebɔ" :
+                "● Sotuba Field: Logistics, Agrobusiness & Local Edge Processing";
+      } else if (t < 36.5) {
+        label = lang === "fr" ? "● Patrimoine Bogolan : Fusion Tradition Textile & Réseaux de Neurones" :
+                lang === "bm" ? "● Bɔgɔlan & AI : An ka Doni Dɛmɛ Kalan Fenw na" :
+                "● Bogolan Heritage: Traditional Mud-Cloth Meets Neural Waveforms";
+      } else if (t < 45.0) {
+        label = lang === "fr" ? "● Marché & Commerce : Assistants Vocaux Mobiles en Bambara" :
+                lang === "bm" ? "● Suguba Baara : Selifoni Kuma Dɛmɛnan Bamanankan na" :
+                "● Commerce & Trade: Mobile Voice Assistants in Bambara";
+      } else if (t < 56.0) {
+        label = lang === "fr" ? "● Bamako Horizon : Vue Crépusculaire sur le Fleuve Niger" :
+                lang === "bm" ? "● Bamakɔ Kɔrɔ : Jolibakɔ Dala Telebin Tuma" :
+                "● Bamako Horizon: Twilight View Across the Niger River";
+      } else {
+        label = lang === "fr" ? "● Première Promotion 2027 : Rejoignez baara.ai" :
+                lang === "bm" ? "● Kalan Kura 2027 : Aw ka Na baara.ai kan" :
+                "● First Cohort 2027: Join baara.ai";
+      }
+      cutIndicator.textContent = label;
+    });
   }
 
   if (openModalBtn && modal) {
