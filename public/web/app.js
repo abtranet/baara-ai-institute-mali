@@ -24,9 +24,45 @@
   const menuToggle = document.querySelector(".cs-munu_toggle");
   const navList = document.querySelector(".cs_nav_list");
   if (menuToggle && navList) {
-    menuToggle.addEventListener("click", () => {
+    const toggleMenu = (e) => {
+      if (e) e.stopPropagation();
+      menuToggle.classList.toggle("cs-toggle_active");
       menuToggle.classList.toggle("cs_toggle_active");
       navList.classList.toggle("cs_active");
+    };
+
+    const closeMenu = () => {
+      menuToggle.classList.remove("cs-toggle_active", "cs_toggle_active");
+      navList.classList.remove("cs_active");
+    };
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    // Expandable submenus on mobile
+    document.querySelectorAll(".cs-munu_dropdown_toggle").forEach((toggleBtn) => {
+      toggleBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleBtn.classList.toggle("active");
+      });
+    });
+
+    // Close menu when clicking navigation anchor links (except dropdown toggles or language switches)
+    navList.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 1200) {
+          closeMenu();
+        }
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (window.innerWidth < 1200 && navList.classList.contains("cs_active")) {
+        if (!navList.contains(e.target) && !menuToggle.contains(e.target)) {
+          closeMenu();
+        }
+      }
     });
   }
 
