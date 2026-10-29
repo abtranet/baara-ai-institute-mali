@@ -250,11 +250,11 @@
           `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nPhone/WhatsApp: ${phone}\nTrack: ${subject}\n\nMessage:\n${message}`
         );
         contactFeedback.style.color = "#F39C12";
-        contactFeedback.innerHTML = `<a href="mailto:contact@baara.ai?subject=${mailtoSubject}&body=${mailtoBody}" style="color:#0dcaf0;text-decoration:underline;">click here to open in your mail app</a> or email <strong>contact@baara.ai</strong>.`;
+        contactFeedback.innerHTML = `${formText("We could not send your inquiry.")} <a href="mailto:contact@baara.ai?subject=${mailtoSubject}&body=${mailtoBody}" style="color:#0dcaf0;text-decoration:underline;">${formText("Open it in your mail app")}</a>${formText(", or email contact@baara.ai.")}`;
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = `Send Inquiry <i class="bi bi-arrow-right"></i>`;
+          submitBtn.innerHTML = `${formText("Send Inquiry")} <i class="bi bi-arrow-right"></i>`;
         }
       }
     });

@@ -85,6 +85,10 @@
     proj_title: "Bamanankan NLP Labo Kɔnɔna: IA Kan Na Min Mali Mɔgɔ Caaman Bɛ Fɔ Don O Don"
   };
   const DICT_FR = {
+  "We could not send your inquiry.": "Nous n'avons pas pu envoyer votre demande.",
+  "Open it in your mail app": "Ouvrez-la dans votre messagerie",
+  ", or email contact@baara.ai.": ", ou écrivez à contact@baara.ai.",
+
   "Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. We are designing the Bamako campus to keep classes, coding labs, and model training running every day.": "Une alimentation électrique fiable et un accès local rapide aux données, aux outils de code et aux modèles d'IA sont indispensables à la pratique quotidienne. Nous concevons le campus de Bamako pour que les cours, les laboratoires de code et l'entraînement des modèles fonctionnent chaque jour.",
   "Building Partnerships With Malian Researchers, Universities, and Local Employers": "Des Partenariats en Construction avec les Chercheurs, Universités et Employeurs Maliens",
   "We are seeking partners across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.": "Nous recherchons des partenaires autour de cinq piliers pour relier la recherche ouverte en langue bambara, la formation pratique et l'accès à des emplois techniques rémunérés au Mali.",
@@ -502,6 +506,10 @@
   "Interagir avec le robot": "Interagir avec le robot"
 };
   const DICT_BM = {
+  "We could not send your inquiry.": "An ma se ka i ka ɲiningali ci.",
+  "Open it in your mail app": "A da i ka imɛli porogaramu kɔnɔ",
+  ", or email contact@baara.ai.": ", walima bataki ci contact@baara.ai ma.",
+
   "Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. We are designing the Bamako campus to keep classes, coding labs, and model training running every day.": "Kuran sabatilen ni kunnafoniw, kodi minɛnw, ni IA modɛliw sɔrɔli so kɔnɔ, o de bɛ baara lakika to a kɛnɛ ma don o don. An bɛ Bamakɔ kalanso labɛn walasa kalan, kodi labow, ni modɛli kalan ka taa ɲɛ don o don.",
   "Building Partnerships With Malian Researchers, Universities, and Local Employers": "An Bɛ Jɛɲɔgɔnya Dilan Ni Mali Ɲinikɛlaw, Iniwɛrisitew ni Baaratigiw Ye",
   "We are seeking partners across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.": "An bɛ jɛɲɔgɔnw ɲini jɛkulu sara duuru kan walasa Bamanankan ɲinini, kalanso baara lakika, ni baara saraɲuman ka jɛ Mali kɔnɔ.",
