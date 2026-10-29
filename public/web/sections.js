@@ -108,8 +108,8 @@
       chip: T("Global Remote Talent Platform", "Plateforme Mondiale de Talents à Distance"),
       title: T("Explore Prominent Remote AI Roles on Mercor", "Explorez des Postes IA à Distance sur Mercor"),
       desc: T(
-        "Mercor pairs pre-vetted international AI developers, annotators, and researchers with global technology companies. See active openings, salary benchmarks, and apply directly through our partner portal:",
-        "Mercor met en relation des développeurs, annotateurs et chercheurs en IA présélectionnés avec des entreprises technologiques mondiales. Consultez les offres actives, les repères salariaux et postulez directement via notre portail partenaire :"
+        "Mercor pairs pre-vetted international AI developers, annotators, and researchers with global technology companies. See active openings, salary benchmarks, and apply directly on Mercor:",
+        "Mercor met en relation des développeurs, annotateurs et chercheurs en IA présélectionnés avec des entreprises technologiques mondiales. Consultez les offres actives, les repères salariaux et postulez directement sur Mercor :"
       ),
       cta: T("Apply / Explore on Mercor", "Postuler / Explorer sur Mercor"),
       href: "https://t.mercor.com/S0VZG"

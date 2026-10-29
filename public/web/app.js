@@ -185,6 +185,22 @@
     nextBtn.addEventListener("click", rotateTestimonials);
   }
 
+  function formText(text) {
+    const lang = document.documentElement.lang;
+    const dict = lang === "bm" ? window.baaraDictBm : lang === "fr" ? window.baaraDictFr : null;
+    return (dict && dict[text]) || text;
+  }
+  async function confirmedSubmission(payload) {
+    const response = await fetch("https://formsubmit.co/ajax/contact@baara.ai", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+    if (!response.ok || (result.success !== true && result.success !== "true")) {
+      throw new Error("Submission not confirmed");
+    }
+  }
   // 8. Partnership Inquiry & Newsletter Forms (Wired to contact@baara.ai)
   const contactForm = document.getElementById("baaraContactForm");
   const contactFeedback = document.getElementById("contactFeedback");
@@ -204,12 +220,12 @@
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = `Sending inquiry... <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display:inline-block;width:14px;height:14px;border:2px solid #fff;border-right-color:transparent;border-radius:50%;vertical-align:middle;margin-left:6px;animation:spin 0.75s linear infinite;"></span>`;
+        submitBtn.textContent = formText("Sending...");
       }
 
       contactFeedback.style.display = "block";
       contactFeedback.style.color = "#0dcaf0";
-      contactFeedback.textContent = "Routing inquiry to the founding team at contact@baara.ai...";
+      contactFeedback.textContent = formText("Sending...");
 
       const payload = {
         name,
@@ -223,47 +239,22 @@
       };
 
       try {
-        let sent = false;
-        try {
-          const apiRes = await fetch("/api/contact", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-          });
-          if (apiRes.ok) sent = true;
-        } catch (e) {}
-
-        if (!sent) {
-          const response = await fetch("https://formsubmit.co/ajax/contact@baara.ai", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Accept": "application/json"
-            },
-            body: JSON.stringify(payload)
-          });
-          if (response.ok) sent = true;
-        }
-
-        if (sent) {
-          contactFeedback.style.color = "#2ECC71";
-          contactFeedback.innerHTML = `<strong>Aw ni ce!</strong> Your inquiry has been sent directly to the BAARA team (<strong>contact@baara.ai</strong>). We will respond to <u>${email}</u> shortly.`;
-          contactForm.reset();
-        } else {
-          throw new Error("Endpoint response not ok");
-        }
+        await confirmedSubmission(payload);
+        contactFeedback.style.color = "#2ECC71";
+        contactFeedback.textContent = formText("Thank you. We received your inquiry and will reply to {email}.").replace("{email}", email);
+        contactForm.reset();
       } catch (err) {
-        // Fail-safe fallback: generate mailto link so no inquiry is ever lost
+        // Offer the mail app when delivery is not confirmed.
         const mailtoSubject = encodeURIComponent(`[baara.ai Inquiry] ${subject}`);
         const mailtoBody = encodeURIComponent(
           `Name: ${name}\nEmail: ${email}\nOrganization: ${organization}\nPhone/WhatsApp: ${phone}\nTrack: ${subject}\n\nMessage:\n${message}`
         );
         contactFeedback.style.color = "#F39C12";
-        contactFeedback.innerHTML = `Inquiry recorded! If you'd like to confirm immediately, <a href="mailto:contact@baara.ai?subject=${mailtoSubject}&body=${mailtoBody}" style="color:#0dcaf0;text-decoration:underline;">click here to open in your mail app</a> or email <strong>contact@baara.ai</strong>.`;
+        contactFeedback.innerHTML = `${formText("We could not send your inquiry.")} <a href="mailto:contact@baara.ai?subject=${mailtoSubject}&body=${mailtoBody}" style="color:#0dcaf0;text-decoration:underline;">${formText("Open it in your mail app")}</a>${formText(", or email contact@baara.ai.")}`;
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = `Send Inquiry <i class="bi bi-arrow-right"></i>`;
+          submitBtn.innerHTML = `${formText("Send Inquiry")} <i class="bi bi-arrow-right"></i>`;
         }
       }
     });
@@ -281,19 +272,17 @@
       if (btn) btn.disabled = true;
 
       try {
-        await fetch("https://formsubmit.co/ajax/contact@baara.ai", {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Accept": "application/json" },
-          body: JSON.stringify({
-            email: emailVal,
-            _subject: `[baara.ai Newsletter] New subscriber: ${emailVal}`
-          })
+        await confirmedSubmission({
+          email: emailVal,
+          _subject: `[baara.ai Newsletter] New subscriber: ${emailVal}`
         });
-      } catch (e) {}
-
-      alert(`Aw ni ce! ${emailVal} has been subscribed to BAARA quarterly impact reports.`);
-      newsletterForm.reset();
-      if (btn) btn.disabled = false;
+        alert(`Aw ni ce! ${emailVal} has been subscribed to BAARA quarterly impact reports.`);
+        newsletterForm.reset();
+      } catch (err) {
+        alert(formText("We could not subscribe you. Please email contact@baara.ai."));
+      } finally {
+        if (btn) btn.disabled = false;
+      }
     });
   }
 
