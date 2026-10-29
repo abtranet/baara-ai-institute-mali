@@ -429,9 +429,9 @@
           "Degebaga 88 Kalan Siraw 4 Kan Ka Baara Kɛ Mali Porojɛ Sɛbɛw Kan"
         ),
         description: T(
-          "The inaugural intensive 6-month cohort in Bamako. Learners build hands-on applications in clinic triage, agro-meteorological advisory, Bambara speech datasets, and local business automation, supported by daily mentor code reviews and monthly stipends.",
-          "La première promotion intensive de 6 mois à Bamako. 88 apprenants réalisent des projets appliqués : triage clinique, conseil agro-météorologique, corpus vocal bambara et automatisation pour entreprises locales, avec encadrement quotidien et bourses de vie.",
-          "Kalan fɔlɔ kalo 6 kɔnɔ Bamakɔ. Degebaga 88 bɛ baara kɛ porojɛ sɛbɛw kan : dɔgɔtɔrɔso triage, sɛnɛ n'sanji lasebaga, bamanankan kuma baarakɛlaw, ni dɛmɛ kalo o kalo."
+          "The inaugural intensive 6-month cohort in Bamako. Learners build hands-on applications in public health information, agro-meteorological advisory, Bambara speech datasets, and local business automation, supported by daily mentor code reviews and monthly stipends.",
+          "La première promotion intensive de 6 mois à Bamako. 88 apprenants réalisent des projets appliqués : information en santé publique, conseil agro-météorologique, corpus vocal bambara et automatisation pour entreprises locales, avec encadrement quotidien et bourses de vie.",
+          "Kalan fɔlɔ kalo 6 kɔnɔ Bamakɔ. Degebaga 88 bɛ baara kɛ porojɛ sɛbɛw kan : jama kɛnɛya kunnafoniw, sɛnɛ n'sanji lasebaga, bamanankan kuma baarakɛlaw, ni dɛmɛ kalo o kalo."
         ),
         deliverables: [
           T("88 learners completing hands-on tracks with 70% project-based building", "88 apprenants formés à 70 % par des projets pratiques et études de cas", "Degebaga 88 bɛ kalan kɛ 70% porojɛw sɛbɛ kan"),
