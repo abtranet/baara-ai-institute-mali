@@ -21,7 +21,6 @@
   const speechClose = document.getElementById("robotSpeechClose");
   const chirpBtn = document.getElementById("robotChirpBtn");
   const modeBtn = document.getElementById("robotModeToggle");
-  const modeLabel = document.getElementById("robotModeLabel");
   const splineMount = document.getElementById("hero-spline-robot-root");
 
   // Multilingual robot phrases
@@ -55,7 +54,7 @@
       },
       {
         lang: "FRANÇAIS",
-        text: "Du zéro numérique au premier emploi tech rémunéré mondial ou local.",
+        text: "Des compétences informatiques de base au premier emploi tech rémunéré mondial ou local.",
         btn: "Voir les débouchés",
         link: "#careers"
       },
@@ -282,22 +281,10 @@
   const ROBOT_DEFAULT_SRC = "/assets/images/home-one/hero/hero-robot-black.png";
   const ROBOT_ALT_SRC = "/assets/images/home-one/hero/hero-img1.png";
 
-  const ROBOT_LABELS = {
-    spline: {
-      fr: "✦ Mode 3D Spline (Actif)",
-      en: "✦ Interactive 3D Robot (Active)",
-      bm: "✦ 3D Spline Robot (Kɛlen)"
-    },
-    black: {
-      fr: "✦ Robot Noir 3D",
-      en: "✦ Black 3D Robot",
-      bm: "✦ Robot Fin 3D"
-    },
-    malian: {
-      fr: "✦ Robot Blanc 3D",
-      en: "✦ White 3D Robot",
-      bm: "✦ Robot Jɛman 3D"
-    }
+  const ROBOT_ACTION_LABELS = {
+    en: "Change robot",
+    fr: "Changer de robot",
+    bm: "Robot yɛlɛma"
   };
 
   function getActiveRobotMode() {
@@ -308,12 +295,10 @@
     return "spline"; // Default to 3D version
   }
 
-  function updateModeLabel(mode) {
-    if (!modeLabel) return;
-    const currentMode = mode || getActiveRobotMode();
-    const lang = document.documentElement.lang?.toLowerCase() || "fr";
-    const dict = ROBOT_LABELS[currentMode] || ROBOT_LABELS.spline;
-    modeLabel.textContent = dict[lang] || dict.fr || dict.en;
+  function updateModeLabel() {
+    if (!modeBtn) return;
+    const lang = document.documentElement.lang?.toLowerCase() || "en";
+    modeBtn.setAttribute("aria-label", ROBOT_ACTION_LABELS[lang] || ROBOT_ACTION_LABELS.en);
   }
 
   function applyRobotMode(mode, save = true) {

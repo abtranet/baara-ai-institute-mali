@@ -1244,4 +1244,19 @@
 
 .baara-legal-note { font-size: 14px; line-height: 1.5; opacity: 0.8; margin-top: 8px; }
 
+.baara-campus-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #0b132b;
+  border-radius: 20px;
+}
+
+#about .baara-about-video { width: 100%; }
+#about .baara-campus-video { width: 100%; border-radius: 28px; }
+
+#baaraVideoSoundBtn[hidden] { display: none; }
+#baaraVideoSoundBtn { margin-top: 12px; }
+
 .baara-flagship-note { margin-top: 12px; font-weight: 600; }
