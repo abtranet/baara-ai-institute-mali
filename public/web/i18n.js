@@ -85,6 +85,15 @@
     proj_title: "Bamanankan NLP Labo Kɔnɔna: IA Kan Na Min Mali Mɔgɔ Caaman Bɛ Fɔ Don O Don"
   };
   const DICT_FR = {
+  "Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. We are designing the Bamako campus to keep classes, coding labs, and model training running every day.": "Une alimentation électrique fiable et un accès local rapide aux données, aux outils de code et aux modèles d'IA sont indispensables à la pratique quotidienne. Nous concevons le campus de Bamako pour que les cours, les laboratoires de code et l'entraînement des modèles fonctionnent chaque jour.",
+  "Building Partnerships With Malian Researchers, Universities, and Local Employers": "Des Partenariats en Construction avec les Chercheurs, Universités et Employeurs Maliens",
+  "We are seeking partners across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.": "Nous recherchons des partenaires autour de cinq piliers pour relier la recherche ouverte en langue bambara, la formation pratique et l'accès à des emplois techniques rémunérés au Mali.",
+  "Building Partnerships With Malian Researchers, Universities, and Local Employers.": "Des Partenariats en Construction avec les Chercheurs, Universités et Employeurs Maliens.",
+  "Flagship project: a Bambara voice assistant on WhatsApp. People ask questions by voice and hear answers in Bambara.": "Projet phare : un assistant vocal en bambara sur WhatsApp. Chacun pose ses questions à voix haute et écoute les réponses en bambara.",
+  "Sending...": "Envoi en cours...",
+  "Thank you. We received your inquiry and will reply to {email}.": "Merci. Nous avons reçu votre demande et répondrons à {email}.",
+  "We could not subscribe you. Please email contact@baara.ai.": "Nous n’avons pas pu vous inscrire. Veuillez écrire à contact@baara.ai.",
+
   "BAARA Briefs — Issue 01": "Publications BAARA — Numéro 01",
   "BAARA Briefs • Founding Issue": "Publications BAARA • Numéro Inaugural",
   "First Use Case 01 — Public & Community Health:": "Cas d'Usage 01 — Santé Publique & Communautaire :",
@@ -239,7 +248,7 @@
   "Local server caches store all course materials, datasets, and documentation offline.": "Des serveurs locaux hébergent tous les cours, corpus et documentations en local sans dépendre d'Internet.",
   "Laptops shared among learners, maintained on-site with solar charging carts.": "Des ordinateurs portables partagés entre apprenants, entretenus sur place avec des stations de recharge solaire.",
   "Open Research & Ecosystem Pillars": "Recherche Ouverte & Piliers de l'Écosystème",
-  "Built With Malian Researchers, Universities, and Local Employers.": "Bâti Avec les Chercheurs Maliens, les Universités et les Employeurs Locaux.",
+
   "Open Malian AI Datasets": "Jeux de Données IA Maliens Ouverts",
   "Bambara–French sentence pairs and community speech corpora released openly for research.": "Paires de phrases bambara–français et enregistrements audio communautaires publiés en accès libre.",
   "Academic Mentorship & University Linkages": "Mentorat Académique & Liens Universitaires",
@@ -383,7 +392,7 @@
   "Of class time is hands-on project work!": "Du temps de cours est consacré à des projets pratiques !",
   "HOW WE OPERATE • CAMPUS INFRASTRUCTURE": "NOTRE FONCTIONNEMENT • INFRASTRUCTURE DU CAMPUS",
   "Engineered for Bamako. Designed for Uninterrupted Learning.": "Conçu pour Bamako. Taillé pour un Apprentissage Ininterrompu.",
-  "Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. Our Bamako campus is engineered from the ground up to keep classes, coding labs, and model training running smoothly every day.": "Une alimentation électrique fiable et un accès local rapide aux données, aux outils de code et aux modèles d'IA sont indispensables à la pratique quotidienne. Notre campus de Bamako est conçu de A à Z pour maintenir les cours, les laboratoires de code et l'entraînement de modèles opérationnels chaque jour sans interruption.",
+
   "Learners / Year from 2028 (88 in 2027 Pilot)": "Apprenants / An dès 2028 (88 en Pilote 2027)",
   "1. Solar-First Campus Power": "1. Énergie Solaire Prioritaire",
   "Solar panels and battery banks serve as our primary campus power source, keeping classrooms, servers, and shared laptops running continuously.": "Panneaux solaires et parcs de batteries constituent notre source d'énergie principale, assurant le fonctionnement continu des salles de classe, des serveurs et des ordinateurs partagés.",
@@ -395,8 +404,7 @@
   "All curriculum materials, student project guides, and local dataset tools are documented openly and released under public licenses for Mali and the Sahel.": "Tous les supports de cours, guides de projets étudiants et outils de données locales sont documentés ouvertement et publiés sous licences publiques pour le Mali et le Sahel.",
   "Taught in French with Bambara support • Every phase verified by transparent impact indicators": "Enseigné en français avec appui en bambara • Chaque étape vérifiée par des indicateurs d'impact transparents",
   "ECOSYSTEM & COLLABORATION PILLARS": "ÉCOSYSTÈME & PILIERS DE COLLABORATION",
-  "Built With Malian Researchers, Universities, and Local Employers": "Bâti Avec les Chercheurs, Universités et Employeurs Maliens",
-  "We collaborate across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.": "Nous collaborons autour de cinq piliers clés pour lier la recherche ouverte en langue bambara, la formation pratique et l'accès à des emplois techniques rémunérés au Mali.",
+
   "· Building on 47,000 open Bambara–French sentence pairs and community speech benchmarks": "· S'appuyant sur 47 000 paires de phrases bambara–français en libre accès et des benchmarks vocaux communautaires",
   "Academic Links": "Liens Académiques",
   "Universities & Faculty": "Universités & Corps Enseignant",
@@ -494,6 +502,15 @@
   "Interagir avec le robot": "Interagir avec le robot"
 };
   const DICT_BM = {
+  "Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. We are designing the Bamako campus to keep classes, coding labs, and model training running every day.": "Kuran sabatilen ni kunnafoniw, kodi minɛnw, ni IA modɛliw sɔrɔli so kɔnɔ, o de bɛ baara lakika to a kɛnɛ ma don o don. An bɛ Bamakɔ kalanso labɛn walasa kalan, kodi labow, ni modɛli kalan ka taa ɲɛ don o don.",
+  "Building Partnerships With Malian Researchers, Universities, and Local Employers": "An Bɛ Jɛɲɔgɔnya Dilan Ni Mali Ɲinikɛlaw, Iniwɛrisitew ni Baaratigiw Ye",
+  "We are seeking partners across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.": "An bɛ jɛɲɔgɔnw ɲini jɛkulu sara duuru kan walasa Bamanankan ɲinini, kalanso baara lakika, ni baara saraɲuman ka jɛ Mali kɔnɔ.",
+  "Building Partnerships With Malian Researchers, Universities, and Local Employers.": "An Bɛ Jɛɲɔgɔnya Dilan Ni Mali Ɲinikɛlaw, Iniwɛrisitew ni Baaratigiw Ye.",
+  "Flagship project: a Bambara voice assistant on WhatsApp. People ask questions by voice and hear answers in Bambara.": "An ka porojɛ kunba: Bamanankan kuma dɛmɛbaga WhatsApp kan. Mɔgɔw bɛ ɲininkali kɛ ni kumakan ye ka jaabiw mɛn Bamanankan na.",
+  "Sending...": "A bɛ cikan...",
+  "Thank you. We received your inquiry and will reply to {email}.": "I ni ce. An ye i ka ɲiningali sɔrɔ, an bɛna jaabi ci {email} ma.",
+  "We could not subscribe you. Please email contact@baara.ai.": "An ma se ka i tɔgɔ sɛbɛn. Bataki ci contact@baara.ai ma.",
+
   "BAARA Briefs — Issue 01": "BAARA Kunnafoniw — Sɛbɛn 01",
   "BAARA Briefs • Founding Issue": "BAARA Kunnafoniw • Daminɛ Sɛbɛn",
   "First Use Case 01 — Public & Community Health:": "Baara Fɔlɔ 01 — Jama & Sigida Kɛnɛya:",
@@ -648,7 +665,7 @@
   "Local server caches store all course materials, datasets, and documentation offline.": "So sɛrwɛri bɛ kalan sɛbɛnw, kunnafoniw, ni sɛbɛnbaw mara kunuŋɔ kɔkan.",
   "Laptops shared among learners, maintained on-site with solar charging carts.": "Ordinatɛriw tlapalen bɛ kalandenw cɛ, ka labɛn so kɔnɔ tle-fanga fɛ.",
   "Open Research & Ecosystem Pillars": "Ɲinini Lakika & Jɛkulu Saraw",
-  "Built With Malian Researchers, Universities, and Local Employers.": "Mali Ɲinikɛlaw, Iniwɛrisitew ni Baaratigiw Ye Jɛ Ka Dilan.",
+
   "Open Malian AI Datasets": "Mali IA Kunnafoni Kɛnɛkanw",
   "Bambara–French sentence pairs and community speech corpora released openly for research.": "Bamanankan–Faransikan kumasenw ni kankan kunnafoniw dilen bɛ duniya ma ɲinini kama.",
   "Academic Mentorship & University Linkages": "Kalan Ladili & Iniwɛrisite Jɛɲɔgɔnya",
@@ -792,7 +809,7 @@
   "Of class time is hands-on project work!": "Kalan waati bɛ kɛ baara lakika ye!",
   "HOW WE OPERATE • CAMPUS INFRASTRUCTURE": "AN KA BAARAKƐCOGO • KALANSO MINƐNW",
   "Engineered for Bamako. Designed for Uninterrupted Learning.": "Dilanbaara Bamakɔ Ye. Kalan Bɛ Tila Tɛ.",
-  "Reliable power and fast local access to datasets, coding tools, and AI models are essential for daily hands-on engineering. Our Bamako campus is engineered from the ground up to keep classes, coding labs, and model training running smoothly every day.": "Kuran sabatilen ni kunnafoniw, kodi minɛnw, ni IA modɛliw sɔrɔli so kɔnɔ, o de bɛ baara lakika to a kɛnɛ ma don o don. An ka Bamakɔ kalanso dilannen bɛ kabini a daminɛ walasa kalan, kodi labow, ni modɛli kalan ka tila tɛ.",
+
   "Learners / Year from 2028 (88 in 2027 Pilot)": "Kalandenw / San kabini 2028 (88 san 2027 kɔnɔ)",
   "1. Solar-First Campus Power": "1. Tle-Fanga Kalanso Kuran",
   "Solar panels and battery banks serve as our primary campus power source, keeping classrooms, servers, and shared laptops running continuously.": "Tle-fanga panow ni batri storage bɛ kalanso mara kɛnɛ ma, ka kalansow, sɛrwɛriw, ni ordinatɛriw to baara la tuma bɛɛ.",
@@ -804,8 +821,7 @@
   "All curriculum materials, student project guides, and local dataset tools are documented openly and released under public licenses for Mali and the Sahel.": "Kalan sɛbɛn bɛɛ, kalanden ka baara ɲɛmabilasiraw, ni kunnafoni minɛnw sɛbɛnnen bɛ kɛnɛkan Mali ni Sahel bɛɛ ye.",
   "Taught in French with Bambara support • Every phase verified by transparent impact indicators": "Kalan bɛ kɛ Faransikan na ni Bamanankan dɛmɛ ye • Kɛlɛkolo bɛɛ kɔrɔsilen bɛ nafa sɛbɛnw fɛ",
   "ECOSYSTEM & COLLABORATION PILLARS": "JƐKULU & JƐƝƆGƆNYA SARA KUNTIGI",
-  "Built With Malian Researchers, Universities, and Local Employers": "Mali Ɲinikɛlaw, Iniwɛrisitew ni Baaratigiw Ye Jɛ Ka Dilan",
-  "We collaborate across five ecosystem pillars to connect open Bambara language research, practical classroom training, and paid technical employment in Mali.": "An bɛ baara kɛ jɛkulu sara duuru kan walasa Bamanankan ɲinini, kalanso baara lakika, ni baara saraɲuman ka jɛ Mali kɔnɔ.",
+
   "· Building on 47,000 open Bambara–French sentence pairs and community speech benchmarks": "· Sinsinnen Bamanankan–Faransikan kumasen 47 000 & kankan sɛbɛnbaw kan",
   "Academic Links": "Iniwɛrisite Jɛɲɔgɔnya",
   "Universities & Faculty": "Iniwɛrisitew & Karamɔgɔw",
