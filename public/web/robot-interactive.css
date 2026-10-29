@@ -100,7 +100,7 @@
 
 /* Natural robotic double-blink timing sequence */
 @keyframes baaraLifelikeBlink {
-  0%, 86%, 92%, 96%, 100% {
+  0%, 86%, 92%, 96.0%, 100% {
     transform: scaleY(1) scaleX(1);
     opacity: 0.95;
     filter: brightness(1);

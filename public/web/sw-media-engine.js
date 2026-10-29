@@ -6,25 +6,20 @@
  *  - Save-Data / 2G header interception to rewrite heavy streams to Animated WebP + 32kbps Audio
  */
 
-const CACHE_STATIC = "baara-static-v1";
-const CACHE_AUDIO_LITE = "baara-audio-v1";
-const CACHE_VIDEO_CMAF = "baara-video-cmaf-v1";
+const CACHE_STATIC = "baara-static-cohorte2027-v1";
+const CACHE_AUDIO_LITE = "baara-audio-cohorte2027-v1";
+const CACHE_VIDEO_CMAF = "baara-video-cmaf-cohorte2027-v1";
 const MAX_VIDEO_CACHE_ENTRIES = 60; // ~12-18 MB cap for 2s CMAF chunks
 
 const PRECACHE_STATIC_ASSETS = [
   "./",
   "./index.html",
-  "./app.js",
-  "../config/asset_bandwidth_matrix.json",
-  "../config/parametric_prompts.json",
-  "../config/timeline_schedule.json",
-  "../build_baara_media/dist/poster-sahel-hero.webp",
-  "../build_baara_media/dist/storyboard-loop.webp"
+  "./app.js?v=cohorte2027-v1",
+  "../media/baara-cohorte2027-v1-poster.webp"
 ];
 
-const PRECACHE_AUDIO_ASSETS = [
-  "../build_baara_media/dist/audio-only-lite.m4a"
-];
+// The approved video carries its own music and narration.
+const PRECACHE_AUDIO_ASSETS = [];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -92,6 +87,12 @@ async function handleRangeRequest(request, cachedResponse) {
 self.addEventListener("fetch", (event) => {
   const { request } = event;
   const url = new URL(request.url);
+
+  // Let the server handle byte ranges for the approved progressive video.
+  // A cached full response must not replace a partial response during seeking.
+  if (url.pathname.startsWith("/media/") && url.pathname.endsWith(".mp4")) {
+    return;
+  }
 
   // 1. CMAF Segments (.m4s, init_*.mp4) & HLS/DASH Manifests (.m3u8, .mpd)
   if (

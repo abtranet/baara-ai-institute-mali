@@ -37,3 +37,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env*
+
+# BAARA temporary rendering files
+build_baara_media/work/
+public/build_baara_media/work/
+
+# BAARA private source and temporary media
+assets/source/
+public/assets/source/

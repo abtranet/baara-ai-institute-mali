@@ -197,44 +197,29 @@
         ]
       },
       {
-        tab: T("03 Solar & Offline Campus", "03 Campus Solaire & Hors-Ligne", "03 Tle-Fanga & Kunuŋɔ Kalanso"),
-        tag: T("03 / Built for Uninterrupted Learning", "03 / Conçu pour un Apprentissage Ininterrompu"),
-        title: T(
-          "Solar-first campus power, offline local servers, and regional cloud sync.",
-          "Énergie solaire en priorité, serveurs locaux hors-ligne et synchronisation cloud régionale."
-        ),
-        text: T(
-          "Reliable power and high-speed local access to datasets, documentation, and development tools are essential for daily hands-on engineering in Bamako. Our campus infrastructure is purpose-built to keep classes and coding labs running without interruption.",
-          "Une alimentation fiable et un accès local rapide aux jeux de données, à la documentation et aux outils de développement sont essentiels à la pratique quotidienne de l'ingénierie à Bamako. Notre campus est conçu pour que les cours et les labs de code tournent sans interruption."
-        ),
+        tab: T("03 Planned Solar & Offline Campus", "03 Campus solaire et hors ligne prévu", "03 Tile-Fanga ni Intɛrinɛti Ntanya Kalanso Ɲɛsigi"),
+        tag: T("03 / Planned for Uninterrupted Learning", "03 / Prévu pour un apprentissage sans interruption", "03 / Ɲɛsigi Kalan Waleyali Tila Ntanya Ye"),
+        title: T("The planned campus will use solar-first power, offline local servers, and regional cloud sync.", "Le campus prévu utilisera l'énergie solaire en priorité, des serveurs locaux hors ligne et une synchronisation cloud régionale.", "Kalanso ɲɛsigi bɛna tile fanga, so sɛrwɛriw ni cloud jɛli baara."),
+        text: T("Reliable power and high-speed local access to datasets, documentation, and development tools are essential for daily hands-on engineering in Bamako. Our planned campus infrastructure will be built to keep classes and coding labs running without interruption.", "Une alimentation fiable et un accès local rapide aux jeux de données, à la documentation et aux outils de développement sont essentiels à la pratique quotidienne de l'ingénierie à Bamako. Les infrastructures du campus prévu seront conçues pour maintenir les cours et les laboratoires de code sans interruption.", "Kuran sabatilen ni kunnafoniw, sɛbɛnw ni kodi minɛnw sɔrɔli so kɔnɔ ka kan baara lakika ma Bamakɔ. An ka kalanso ɲɛsigi minɛnw bɛna dilan walasa kalan ni kodi labow ka waleya tila ntanya."),
         bullets: [
-          T(
-            "<strong>Solar-First Power:</strong> Dedicated solar arrays and battery banks power classrooms and laptops continuously",
-            "<strong>Énergie Solaire d'Abord :</strong> Des panneaux solaires et des batteries dédiés alimentent en continu les salles et les ordinateurs portables"
-          ),
-          T(
-            "<strong>Offline-Ready Local Servers:</strong> On-campus servers cache video courses, Python libraries, and compact AI models",
-            "<strong>Serveurs Locaux Hors-Ligne :</strong> Les serveurs du campus mettent en cache cours vidéo, bibliothèques Python et modèles d'IA compacts"
-          ),
+          T("<strong>Solar-First Power:</strong> Dedicated solar arrays and battery banks will power classrooms and laptops continuously", "<strong>Énergie Solaire d'Abord :</strong> Des panneaux solaires et des batteries dédiés alimenteront en continu les salles et les ordinateurs portables", "<strong>Tile Fanga Fɔlɔ:</strong> Tile-fanga panow ni batriw bɛna kalan sow ni ordinatɛriw mara kuran na"),
+          T("<strong>Offline-Ready Local Servers:</strong> Servers at the planned campus will cache video courses, Python libraries, and compact AI models", "<strong>Serveurs Locaux Hors-Ligne :</strong> Les serveurs du campus prévu mettront en cache les cours vidéo, les bibliothèques Python et les modèles d'IA compacts", "<strong>So Sɛrwɛriw:</strong> Kalanso ɲɛsigi ka sɛrwɛriw bɛna kalan wideyow, Python minɛnw ni IA modɛli fitininw mara"),
           T(
             "<strong>Malian-Led + Regional Cloud Sync:</strong> Led in Bamako with West African academic and cloud collaboration",
             "<strong>Pilotage Malien + Synchronisation Cloud Régionale :</strong> Dirigé depuis Bamako, avec une collaboration académique et cloud ouest-africaine"
           )
         ],
-        dataTitle: T("Campus Technical Architecture", "Architecture Technique du Campus"),
-        dataSub: T(
-          "Engineered for zero-downtime hands-on AI training",
-          "Conçue pour une formation pratique à l'IA sans interruption"
-        ),
-        chip: T("Resilient Campus", "Campus Résilient"),
+        dataTitle: T("Planned Campus Technical Architecture", "Architecture technique du campus prévu", "Kalanso Ɲɛsigi Minɛnw Cogoya"),
+        dataSub: T("Planned for hands-on AI training without interruption", "Prévue pour une formation pratique à l'IA sans interruption", "Ɲɛsigi IA Kalan Lakika Waleyali Tila Ntanya Ye"),
+        chip: T("Planned Resilient Campus", "Campus résilient prévu", "Kalanso Sabatilen Ɲɛsigi"),
         bars: [
-          { label: T("Solar array & battery autonomy during classroom hours", "Autonomie solaire & batteries pendant les heures de cours"), value: "100%", pct: 100 },
-          { label: T("Curriculum, Python packages & datasets cached on LAN", "Curriculum, paquets Python & jeux de données en cache sur le réseau local"), value: "100%", pct: 100 },
-          { label: T("Hands-on lab time on shared solar-backed workstations", "Temps de lab pratique sur postes partagés alimentés au solaire"), value: "70%", pct: 70 }
+          { label: T("Planned solar array & battery autonomy during classroom hours", "Autonomie solaire et batteries prévue pendant les cours", "Tile Fanga ni Batri Fanga Ɲɛsigi Kalan Waati La"), value: "100%", pct: 100 },
+          { label: T("Planned local caching of curriculum, Python packages & datasets", "Cache local prévu pour les cours, les paquets Python et les jeux de données", "Kalan, Python Minɛnw ni Kunnafoniw Marali Ɲɛsigi So Kɔnɔ"), value: "100%", pct: 100 },
+          { label: T("Planned hands-on lab time on shared solar-backed workstations", "Temps de pratique prévu sur postes partagés alimentés au solaire", "Labo Baara Lakika Waati Ɲɛsigi Tile-Fanga Ordinatɛriw Kan"), value: "70%", pct: 70 }
         ],
         metrics: [
-          { v: T("Solar", "Solaire"), l: T("Primary campus power", "Énergie principale du campus") },
-          { v: T("Offline", "Hors-Ligne"), l: T("Local server & model cache", "Serveur local & cache de modèles") },
+          { v: T("Solar", "Solaire"), l: T("Planned primary campus power", "Source d'énergie principale prévue du campus", "Kalanso Kuran Sɔrɔyɔrɔ Fɔlɔ Ɲɛsigi") },
+          { v: T("Offline", "Hors-Ligne"), l: T("Planned local server & model cache", "Serveur local et cache de modèles prévus", "So Sɛrwɛri ni Modɛli Marali Ɲɛsigi") },
           { v: T("Open", "Ouvert"), l: T("Public Bambara releases", "Publications publiques en bambara") }
         ]
       },

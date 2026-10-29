@@ -1,5 +1,5 @@
 /**
- * baara.ai — AI Institute of Mali Interactive Controller, #pitch Thesis Deck & Campus Preview Engine
+ * baara.ai — AI Institute of Mali Interactive Controller, #pitch Thesis Deck & Concept Preview Engine
  */
 
 (async function initBaaraSchoolApp() {
@@ -310,7 +310,7 @@
       hero_tag: "BAARA — AI Institute of Mali • Bamako, Mali • First Cohort 2027",
       hero_html: "<span>Malian Youth,</span> Building AI In Their <span>Own Languages.</span>",
       hero_desc:
-        "A job-first AI school in Bamako. Four tracks take learners from no digital skills to paid work, with an open lab for Bambara language AI. Teaching is in French with Bambara support, and 70% of class time is hands-on project work.",
+        "A job-first AI school in Bamako. Four tracks take learners from basic computer skills to paid work, with an open lab for Bambara language AI. Teaching is in French with Bambara support, and 70% of class time is hands-on project work.",
       hero_btn: "Sponsor or Partner",
       hero_kpi1_val: "300 / yr",
       hero_kpi1_lbl: "Learners per year from 2028 (88 in 2027 Pilot)",
@@ -340,7 +340,7 @@
       hero_tag: "BAARA — Institut d'IA du Mali • Bamako, Mali • 1re Cohorte 2027",
       hero_html: "<span>La Jeunesse Malienne,</span> Bâtissant l'IA Dans Ses <span>Propres Langues.</span>",
       hero_desc:
-        "Une école d'IA tournée vers l'emploi à Bamako. Quatre parcours mènent les apprenants de zéro compétence numérique à un travail rémunéré, avec un laboratoire ouvert pour l'IA en langue bambara (70 % de projets pratiques).",
+        "Une école d'IA tournée vers l'emploi à Bamako. Quatre parcours mènent les apprenants des compétences informatiques de base à un travail rémunéré, avec un laboratoire ouvert pour l'IA en langue bambara (70 % de projets pratiques).",
       hero_btn: "Parrainer ou Participer",
       hero_kpi1_val: "300 / an",
       hero_kpi1_lbl: "Apprenants par an dès 2028 (88 en pilote 2027)",
@@ -370,7 +370,7 @@
       hero_tag: "BAARA — Mali IA Kalanso • Bamakɔ, Mali • Kalan Daminɛ 2027",
       hero_html: "<span>Mali Denmisɛnw,</span> Bɛ IA Dilan U Yɛrɛ Ka <span>Kanw Na.</span>",
       hero_desc:
-        "IA kalanso min bɛ baara sɔrɔli bila ɲɛ Bamakɔ. Kalan sira naani bɛ kalandenw bɔ ordinatɛri dɔnbaliya la ka taa baara saraɲuman na, ni Bamanankan IA labo daɲɛw ye.",
+        "IA kalanso min bɛ baara sɔrɔli bila ɲɛ Bamakɔ. Kalan sira naani bɛ kalandenw bɔ ordinatɛri baara dɔnko jɔnjɔnw la ka taa baara saraɲuman na, ni Bamanankan IA labo daɲɛw ye.",
       hero_btn: "Kalanden Dɛmɛ (1 500 $)",
       hero_kpi1_val: "300 / san",
       hero_kpi1_lbl: "Kalandenw san o san kabini 2028 (88 san 2027 kɔnɔ)",
@@ -401,93 +401,106 @@
     });
   });
 
-  // 10. Bamako 60s Campus Preview Video Modal
+  // 10. Bamako 60s Concept Preview Video Modal
   const modal = document.getElementById("baaraVideoModal");
   const openModalBtn = document.getElementById("openVideoModalBtn");
   const closeModalBtn = document.getElementById("closeVideoModalBtn");
   const videoEl = document.getElementById("baaraVideo");
-  const webpContainer = document.getElementById("webpFallbackContainer");
-  const liteAudio = document.getElementById("liteAudioPlayer");
-  const cutIndicator = document.getElementById("activeCutIndicator");
-
-  function loadCampusPreviewStream() {
-    if (!videoEl) return;
-    if (webpContainer) webpContainer.style.display = "none";
-    if (liteAudio) liteAudio.pause();
-    videoEl.style.display = "block";
-
-    const manifestUrl = "/build_baara_media/dist/stream_T1_480p_Edge.m3u8";
-    if (videoEl.canPlayType("application/vnd.apple.mpegurl")) {
-      videoEl.src = manifestUrl;
-    } else {
-      videoEl.src = "/build_baara_media/intermediate/mezzanine_muxed_1080p24.mp4";
-    }
-  }
-
-  if (videoEl && cutIndicator) {
-    videoEl.addEventListener("timeupdate", () => {
-      const t = videoEl.currentTime;
-      const lang = document.documentElement.lang || "en";
-      let label = "● Campus Preview: French & Bambara Instruction";
-
-      if (t < 4.0) {
-        label = lang === "fr" ? "● Studio : Présentation de l'Institut d'IA du Mali" :
-                lang === "bm" ? "● Kalanso Filɛ : Mali IA Kalanso Lakodɔnni" :
-                "● Studio: Introducing the AI Institute of Mali";
-      } else if (t < 9.5) {
-        label = lang === "fr" ? "● Campus ACI 2000 : Infrastructures de Calcul & Salles de Cours" :
-                lang === "bm" ? "● ACI 2000 Kalanso : Jatebɔ Minanw & Kalan Yɔrɔw" :
-                "● ACI 2000 Campus: Compute Infrastructure & Learning Studios";
-      } else if (t < 11.5) {
-        label = lang === "fr" ? "● Studio : Modèles Bamanankan & Souveraineté Numérique" :
-                lang === "bm" ? "● Bamanankan Hakilitigiya : An Yɛrɛ ka Dɔnniya" :
-                "● Studio: Bambara AI Models & Digital Sovereignty";
-      } else if (t < 19.0) {
-        label = lang === "fr" ? "● Labo NLP Bambara : Entraînement de Modèles Vocaux Souverains" :
-                lang === "bm" ? "● Bamanankan Labo : Kan Kuma Modelw Dilanli" :
-                "● Bambara NLP Lab: Training Sovereign Speech Models";
-      } else if (t < 21.5) {
-        label = lang === "fr" ? "● Studio : IA Appliquée aux Besoins Réels de l'Afrique" :
-                lang === "bm" ? "● Studio : Hakilitigiya Baara Sɛbɛw Kama" :
-                "● Studio: Practical AI Built for Real Sahel Workflows";
-      } else if (t < 29.5) {
-        label = lang === "fr" ? "● Terrain Sotuba : Logistique, Agro-Industrie & Traitement Local" :
-                lang === "bm" ? "● Sotuba Baara : Feereli, Sene-kow & Foroba Jatebɔ" :
-                "● Sotuba Field: Logistics, Agrobusiness & Local Edge Processing";
-      } else if (t < 36.5) {
-        label = lang === "fr" ? "● Patrimoine Bogolan : Fusion Tradition Textile & Réseaux de Neurones" :
-                lang === "bm" ? "● Bɔgɔlan & AI : An ka Doni Dɛmɛ Kalan Fenw na" :
-                "● Bogolan Heritage: Traditional Mud-Cloth Meets Neural Waveforms";
-      } else if (t < 45.0) {
-        label = lang === "fr" ? "● Marché & Commerce : Assistants Vocaux Mobiles en Bambara" :
-                lang === "bm" ? "● Suguba Baara : Selifoni Kuma Dɛmɛnan Bamanankan na" :
-                "● Commerce & Trade: Mobile Voice Assistants in Bambara";
-      } else if (t < 56.0) {
-        label = lang === "fr" ? "● Bamako Horizon : Vue Crépusculaire sur le Fleuve Niger" :
-                lang === "bm" ? "● Bamakɔ Kɔrɔ : Jolibakɔ Dala Telebin Tuma" :
-                "● Bamako Horizon: Twilight View Across the Niger River";
-      } else {
-        label = lang === "fr" ? "● Première Promotion 2027 : Rejoignez baara.ai" :
-                lang === "bm" ? "● Kalan Kura 2027 : Aw ka Na baara.ai kan" :
-                "● First Cohort 2027: Join baara.ai";
-      }
-      cutIndicator.textContent = label;
-    });
-  }
-
+  // The native MP4 player serves the approved edit on every browser.
+  // Its source loads only after the visitor opens the preview.
   if (openModalBtn && modal) {
     openModalBtn.addEventListener("click", () => {
       modal.classList.add("open");
-      loadCampusPreviewStream();
-      if (videoEl) videoEl.play().catch(() => {});
+      if (closeModalBtn) closeModalBtn.focus();
+      if (videoEl) {
+        if (videoEl.ended) videoEl.currentTime = 0;
+        videoEl.play().catch(() => {});
+      }
     });
   }
 
-  if (closeModalBtn && modal) {
-    closeModalBtn.addEventListener("click", () => {
-      modal.classList.remove("open");
-      if (videoEl) videoEl.pause();
-      if (liteAudio) liteAudio.pause();
+  function closeCampusPreview() {
+    if (!modal) return;
+    modal.classList.remove("open");
+    if (videoEl) videoEl.pause();
+    if (openModalBtn) openModalBtn.focus();
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", closeCampusPreview);
+  }
+  if (modal) {
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeCampusPreview();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("open")) {
+        closeCampusPreview();
+      }
     });
   }
+})();
+
+// Load the campus preview near the viewport; play only while it is visible.
+(() => {
+  const video = document.getElementById("baaraCampusVideo");
+  if (!video) return;
+  video.muted = false;
+  const soundButton = document.getElementById("baaraVideoSoundBtn");
+  if (soundButton) soundButton.addEventListener("click", () => {
+    load();
+    video.muted = false;
+    userPaused = false;
+    video.play().then(() => { soundButton.hidden = true; }).catch(() => {});
+  });
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const connection = navigator.connection;
+  let inView = false;
+  let userPaused = false;
+  let automaticPause = false;
+  function load() {
+    if (!video.getAttribute("src")) video.src = video.dataset.src;
+  }
+  function update() {
+    const allowed = !reducedMotion.matches && !(connection && connection.saveData);
+    if (inView && !document.hidden && allowed && !userPaused) {
+      load();
+      video.play().then(() => {
+        if (soundButton) soundButton.hidden = true;
+      }).catch((error) => {
+        if (soundButton && error.name === "NotAllowedError") soundButton.hidden = false;
+      });
+    } else if (!video.paused) {
+      automaticPause = true;
+      video.pause();
+    }
+  }
+  video.addEventListener("pause", () => {
+    if (!automaticPause) userPaused = true;
+    automaticPause = false;
+  });
+  video.addEventListener("play", () => { userPaused = false; });
+  // Native controls remain available when automatic playback is disabled.
+  video.addEventListener("pointerdown", load, { once: true });
+  video.addEventListener("keydown", load, { once: true });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      inView = entry.isIntersecting && entry.intersectionRatio >= 0.15;
+      if (!inView) userPaused = false;
+      update();
+    }, { threshold: [0, 0.15] }).observe(video);
+  } else {
+    load();
+  }
+  // Retry audible playback during a user gesture if the browser blocked it.
+  document.addEventListener("click", (event) => {
+    if (!video.contains(event.target)) update();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!video.contains(event.target)) update();
+  });
+  document.addEventListener("visibilitychange", update);
+  reducedMotion.addEventListener("change", update);
+  if (connection) connection.addEventListener("change", update);
 })();
