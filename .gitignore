@@ -45,3 +45,9 @@ public/build_baara_media/work/
 # BAARA private source and temporary media
 assets/source/
 public/assets/source/
+
+# Large media not deployed
+public/build_baara_media/dist/
+public/assets/raw/
+*_1080p*.mp4
+mezzanine_*.mp4
